@@ -1,0 +1,36 @@
+html{
+	overflow: hidden;
+}
+.page{
+	 position: absolute; 
+	 top: 0; 
+	 right: 0; 
+	 bottom: 0; 
+	 left: 0;
+}
+
+.header { 
+	height: 62px; 
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	left: 0; 
+	background-color:#ddd;
+}
+.side { 
+	width: 200px; 
+	position: absolute; 
+	top: 62px; 
+	bottom: 0; 
+	left: 0; 
+	background-color:green;
+}
+
+.content { 
+	position: absolute; 
+	top: 62px; 
+	right: 0; 
+	bottom: 0; 
+	left: 200px; 
+	overflow: auto; 
+}
