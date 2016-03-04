@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Jhou shuai">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/admin.css" />
+    <title>业务管理系统-权限管理</title>
+</head>
+
+<body>
+    <!--主容器-->
+    <div class="container">
+        <!--导航-->
+        <div class="nav nav-bigger">
+            <div class="nav-middle ">
+                <div class="nav-inner visible-lg-block">
+                    <p class="on"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>权限管理</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></p>
+                </div>
+                <div id="nav-list-bigger-div" class="nav-inner visible-bigger-block nav-div-list">
+                    <p class="on"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>权限管理</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></p>
+                    <p><a id="nav-list-bigger-icon" class="list-icon" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a></p>
+                    <ul id="nav-list-bigger" class="nav-list">
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></li>
+                    </ul>
+                </div>
+                <div id="nav-list-big-div" class="nav-inner visible-big-block nav-div-list">
+                    <p  class="on"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>权限管理</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></p>
+                    <p><a id="nav-list-big-icon" class="list-icon" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a></p>
+                    <ul id="nav-list-big" class="nav-list">
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></li>
+                    </ul>
+                </div>
+                <div id="nav-list-sm" class="nav-inner visible-sm-block nav-sm-list">
+                    <a class="a-nav-list on"  href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>权限管理</font></a>
+                    <a id="on-list-nav" class="list-icon"  href="javascript:void(0);">
+                        <i class="glyphicon glyphicon-list"></i>
+                    </a>
+                    <ul id="nav-list" class="nav-list">
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-left">
+                <h1>业务管理系统 <small>&copy;Jhou shuai</small></h1>
+            </div>
+            <div class="nav-right">
+                <img src="./images/zhoushuai30.png" width="20" alt="Jhou shuai" title="Jhou shuai" class="img-circle">
+                <p class="font_size14 fcolor_gray font_bold user">Jhou Shuai(超级管理员)</p>
+                <p class="font_size14 fcolor_gray3">13356781234</p>
+                <a class="top-exit" href="./oaindex.html"><i class="icon iconfont icon-guanbi1"></i>退出登录</a>
+            </div>
+        </div>
+        <div class="nav nav-big">
+            <div class="nav-big-left">
+                <h1>业务管理系统 <small>&copy;Jhou shuai</small></h1>
+            </div>
+            <div id="nav-big-right" class="nav-big-right">
+                <a id="nav-big-right-icon" class="list-icon" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a>
+                <ul id="handle-list" class="photo">
+                    <li class="user-li user">
+                        <img src="./images/zhoushuai30.png" width="20" alt="Jhou shuai" title="Jhou shuai" class="img-circle">
+                        <span class="font_size14 fcolor_gray font_bold user">Jhou Shuai(超级管理员)</span>
+                    </li>
+                    <li class="user-li"><span class="font_size14 fcolor_gray3">13356781234</span></li>
+                    <li class="user-li user-li-nav-list on-user-li"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>权限管理</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待&nbsp;&nbsp;处&nbsp;&nbsp;理</font></a></li>
+                    <li class="user-li"><a class="top-exit" href="./oaindex.html"><i class="icon iconfont icon-guanbi1"></i>退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--中间部分-->
+        <div class="middle">
+            <div class="left">
+                <div class="center">
+                    <!--统计-->
+                    <div class="panel panel-default count">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                客户数据统计
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="fcolor_black font_size14">所有客户（人）</th>
+                                        <th class="fcolor_black font_size14">今日总计（人）</th>
+                                        <th class="fcolor_black font_size14">本月总计（人）</th>
+                                        <th class="fcolor_green font_size14">待处理（人）</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fcolor_red font_size22">4,521</td>
+                                        <td class="font_size22  fcolor_black">123</td>
+                                        <td class="font_size22  fcolor_black">2,354</td>
+                                        <td class="font_size22  fcolor_green">12</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <p class="font_size13 fcolor_gray countime">统计时间：2016-01-12 至 2016-02-20</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--搜索-->
+                    <div class="panel panel-default search">
+                        <div class="panel-heading">
+                            <h3 class="fcolor_blue panel-title">
+                                <i class="icon iconfont icon-search"></i>搜索
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <form  action="" method="post">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon input-intr">客户姓名</span>
+                                        <input name="customer" type="text" class="form-control" placeholder="请输入客户姓名">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon input-intr">联系电话</span>
+                                        <input name="phone" type="tel" class="form-control" placeholder="请输入联系电话">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon input-intr">管&nbsp;&nbsp;理&nbsp;&nbsp;组</span>
+                                        <select  name="role" class="form-control">
+                                            <option value="">全部</option>
+                                            <option value="root">超级管理员</option>
+                                            <option value="caiwu">财务</option>
+                                            <option value="560a31ec75791">资料录入</option>
+                                            <option value="5649531e12ad0">人事</option>
+                                            <option value="567cad801ae34">调档组</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon input-intr">&nbsp;状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态</span>
+                                        <select  name="state" class="form-control">
+                                            <option value="2">全部</option>
+                                            <option value="1">允许</option>
+                                            <option value="0">禁止</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-xs">搜索</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--所有员工-->
+                    <div class="panel panel-default employee">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <span class="fcolor_red">[财务]</span>所有成员
+                            </h3>
+                            <button type="button" class="btn btn-primary btn-xs add-user">添加账号</button>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="nav nav-tabs">
+                                <li role="presentation" class="active">
+                                    <a href="javascript:void(0);" class="on">用户管理</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="javascript:void(0);" class="">权限分组</a>
+                                </li>
+                                <li role="presentation"><a href="javascript:void(0);" class="">操作日志</a></li>
+                                <li class="li-btn">
+                                    <button type="button" class="btn btn-success btn-xs">添加账号</button>
+                                    <button type="button" class="btn btn-info btn-xs">搜索</button>
+                                </li>
+                            </ul>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="fcolor_black font_size14">账号</th>
+                                        <th class="fcolor_black font_size14">员工姓名</th>
+                                        <th class="fcolor_black font_size14">性别</th>
+                                        <th class="fcolor_green font_size14">电话</th>
+                                        <th class="fcolor_green font_size14">角色</th>
+                                        <th class="fcolor_green font_size14">关联业务</th>
+                                        <th class="fcolor_green font_size14">状态</th>
+                                        <th class="fcolor_green font_size14">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>JH-9527</td>
+                                        <td>Jhou shuai</td>
+                                        <td>男</td>
+                                        <td>17761298590</td>
+                                        <td>管理员</td>
+                                        <td>财务</td>
+                                        <td>允许</td>
+                                        <td>
+                                            <a class="btn btn-success btn-xs" href="javascript:void(0);">日志</a>
+                                            <a class="btn btn-info btn-xs" href="javascript:void(0);">编辑</a>
+                                            <a class="btn btn-danger btn-xs" href="javascript:void(0);">删除</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JH-9527</td>
+                                        <td>Jhou shuai</td>
+                                        <td>男</td>
+                                        <td>17761298590</td>
+                                        <td>管理员</td>
+                                        <td>财务</td>
+                                        <td><span class="fcolor_red2 font_bold">禁止</span</td>
+                                    <td>
+                                        <a class="btn btn-success btn-xs" href="javascript:void(0);">日志</a>
+                                        <a class="btn btn-info btn-xs" href="javascript:void(0);">编辑</a>
+                                        <a class="btn btn-danger btn-xs" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--日志-->
+                    <div class="panel panel-default log">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <span class="fcolor_red">[周帅]</span>的所有日志
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="fcolor_black font_size14">账号</th>
+                                        <th class="fcolor_black font_size14">员工姓名</th>
+                                        <th class="fcolor_black font_size14">模块</th>
+                                        <th class="fcolor_green font_size14">动作</th>
+                                        <th class="fcolor_green font_size14">IP地址</th>
+                                        <th class="fcolor_green font_size14 time">时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="active">
+                                        <td>JH-9527(<a>17761298590</a>)</td>
+                                        <td>Jhou shuai</td>
+                                        <td>哔哔哔</td>
+                                        <td>数据库被删</td>
+                                        <td>171.217.176.250</td>
+                                        <td>2016-01-18 17:28:37</td>
+                                    </tr>
+                                    <tr class="success">
+                                        <td>JH-9527(<a>17761298590</a>)</td>
+                                        <td>Jhou shuai</td>
+                                        <td>哈哈哈</td>
+                                        <td>老板跑路</td>
+                                        <td>171.217.176.250</td>
+                                        <td>2016-01-18 17:28:37</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>JH-9527(<a>17761298590</a>)</td>
+                                        <td>Jhou shuai</td>
+                                        <td>哈哈哈</td>
+                                        <td>老板跑路</td>
+                                        <td>171.217.176.250</td>
+                                        <td>2016-01-18 17:28:37</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                    <!--权限-->
+                    <div class="panel panel-default power">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            权限分组
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="fcolor_black font_size14">名称</th>
+                                    <th class="fcolor_black font_size14">权限</th>
+                                    <th class="fcolor_black font_size14">描述</th>
+                                    <th class="fcolor_green font_size14">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="success">
+                                    <td>财务</td>
+                                    <td>合同审核，贷款审核，放款审核，所有贷款，押金明细，回款统计，催收列表，分类统计</td>
+                                    <td>财务人员专用</td>
+                                    <td>
+                                        <a class="btn btn-success btn-xs" href="javascript:void(0);">日志</a>
+                                        <a class="btn btn-info btn-xs" href="javascript:void(0);">编辑</a>
+                                        <a class="btn btn-danger btn-xs" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>财务</td>
+                                    <td>合同审核，贷款审核，放款审核，所有贷款，押金明细，回款统计，催收列表，分类统计</td>
+                                    <td>财务人员专用</td>
+                                    <td>
+                                        <a class="btn btn-success btn-xs" href="javascript:void(0);">日志</a>
+                                        <a class="btn btn-info btn-xs" href="javascript:void(0);">编辑</a>
+                                        <a class="btn btn-danger btn-xs" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="center">
+                    <div class="search-title">
+                        <h3 class="fcolor_blue font-normal font_size15 mt5"><i class="icon iconfont icon-search"></i>搜索</h3>
+                    </div>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon input-intr">客户姓名</span>
+                                <input name="customer" type="text" class="form-control" placeholder="请输入客户姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon input-intr">联系电话</span>
+                                <input name="phone" type="text" class="form-control" placeholder="请输入联系电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon input-intr">管&nbsp;&nbsp;理&nbsp;&nbsp;组</span>
+                                <select  name="role" class="form-control">
+                                    <option value="">全部</option>
+                                    <option value="root">超级管理员</option>
+                                    <option value="caiwu">财务</option>
+                                    <option value="560a31ec75791">资料录入</option>
+                                    <option value="5649531e12ad0">人事</option>
+                                    <option value="567cad801ae34">调档组</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon input-intr">&nbsp;状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态</span>
+                                <select  name="state" class="form-control">
+                                    <option value="2">全部</option>
+                                    <option value="1">允许</option>
+                                    <option value="0">禁止</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-xs btn-search">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#nav-big-right,#nav-big-right-icon,#handle-list").mouseover(function(){
+                $("#handle-list").show();
+            }).mouseout(function(){
+                $("#handle-list").hide();
+            });
+
+            $("#on-list-nav,#nav-list").mouseover(function(){
+                var left = $("#nav-list-sm .on").css("width");
+                $("#nav-list").css({'left':left}).show();
+            }).mouseout(function(){
+                $("#nav-list").hide();
+            });
+
+            $("#nav-list-big-icon,#nav-list-big").mouseover(function(){
+                var left = $("#nav-list-big-div .on").css("width");
+                left=parseInt(left)*2+'px';
+                console.log();
+                $("#nav-list-big").css({'left':left}).show();
+            }).mouseout(function(){
+                $("#nav-list-big").hide();
+            });
+
+            $("#nav-list-bigger-icon,#nav-list-bigger").mouseover(function(){
+                var left = $("#nav-list-bigger-div .on").css("width");
+                left=parseInt(left)*3+'px';
+                console.log();
+                $("#nav-list-bigger").css({'left':left}).show();
+            }).mouseout(function(){
+                $("#nav-list-bigger").hide();
+            });
+        });
+    </script>
+</body>
+</html>

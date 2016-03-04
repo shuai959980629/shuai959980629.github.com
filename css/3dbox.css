@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.containt {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+header {
+    text-align: center;
+}
+
+
+/*3d魔方*/
+
+.space3d {
+    width: 300px;
+    height: 300px;
+    margin: 200px auto;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    /*-webkit-perspective-origin:-25% 40px;*/
+}
+
+._3dbox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 6px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: 200px 200px 0;
+    -webkit-transform-origin: 200px 200px 0;
+    animation: run3D ease-in-out 8s infinite;
+    -webkit-animation: run3D ease-in-out 8s infinite;
+}
+
+@-webkit-keyframes run3D {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+    30% {
+        -webkit-transform: rotateX(90deg) rotateY(90deg);
+    }
+    60% {
+        -webkit-transform: rotateX(-90deg) rotateY(-90deg);
+    }
+    90% {
+        -webkit-transform: rotateY(90deg);
+    }
+    100% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+
+@keyframes run3D {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    30% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    60% {
+        transform: rotateX(-90deg) rotateY(-90deg);
+    }
+    90% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+
+._3dface {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 6px;
+    background-color: #7F7575;
+    opacity: 0.5;
+}
+
+._3dface-front {
+    /*方法一*/
+    /*transform: translate3d(0, 0, 150px);
+    -webkit-transform: translate3d(0, 0, 150px);*/
+    /*方法二*/
+    transform: translateZ(150px);
+    -webkit-transform: translateZ(150px);
+}
+
+._3dface-top {
+    /*方法一*/
+    /*transform: rotateX(90deg) translate3d(0, 0, 150px);
+    -webkit-transform: rotateX(90deg) translate3d(0, 0, 150px);*/
+    /*方法二*/
+    transform: rotateX(90deg) translateZ(150px);
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+}
+
+._3dface-bottom {
+    /*方法一*/
+    /*transform: rotateX(-90deg) translate3d(0, 0, 150px);
+    -webkit-transform: rotateX(-90deg) translate3d(0, 0, 150px);*/
+    /*方法二*/
+    transform: rotateX(-90deg) translateZ(150px);
+    -webkit-transform: rotateX(-90deg) translateZ(150px);
+}
+
+._3dface-left {
+    /*方法一*/
+    /*left: 50%;
+    margin-left: -150px;
+    transform: rotateY(-90deg) translate3d(0, 0, 150px);
+    -webkit-transform: rotateY(-90deg) translate3d(0, 0, 150px);*/
+    /*方法二*/
+    transform: rotateY(-90deg) translateZ(150px);
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+}
+
+._3dface-right {
+    /*方法一*/
+    /*left: 50%;
+    margin-left: -150px;
+    transform: rotateY(90deg) translate3d(0, 0, 150px);
+    -webkit-transform: rotateY(90deg) translate3d(0, 0, 150px);*/
+    /*方法二*/
+    transform: rotateY(90deg) translateZ(150px);
+    -webkit-transform: rotateY(90deg) translateZ(150px);
+}
+
+._3dface-back {
+    /*方法一*/
+    /*transform: rotateY(180deg) translate3d(0, 0, 150px);
+    -webkit-transform: rotateY(180deg) translate3d(0, 0, 150px);*/
+    /*方法二*/
+    transform: translateZ(-150px);
+    -webkit-transform: translateZ(-150px);
+}
+
+div.one-color {
+    float: left;
+    width: 94px;
+    height: 94px;
+    margin: 3px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #F3F3F3;
+}
+
+div.two-color {
+    position: relative;
+    background-color: #F76102;
+    float: left;
+    width: 94px;
+    height: 94px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+div.three-color {
+    position: relative;
+    background-color: #FFFC05;
+    float: left;
+    width: 94px;
+    height: 94px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+div.four-color {
+    position: relative;
+    background-color: #0A11FF;
+    float: left;
+    width: 94px;
+    height: 94px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+div.five-color {
+    position: relative;
+    background-color: #920702;
+    float: left;
+    width: 94px;
+    height: 94px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+div.six-color {
+    position: relative;
+    background-color: #079505;
+    float: left;
+    width: 94px;
+    height: 94px;
+    margin: 3px;
+    border-radius: 5px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Jhou shuai">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="http://cdn.bootcss.com/iCheck/1.0.2/skins/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/oaindex.css"/>
+    <title>业务管理系统</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1>业务管理系统 <small>&copy;Jhou shuai</small></h1>
+        </div>
+        <div class="login-box center-block">
+            <h2>登&nbsp;&nbsp;录</h2>
+            <form method="post" action="./admin.html">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon input-intr"><i class="icon iconfont icon-wo"></i>&nbsp;&nbsp;用&nbsp;&nbsp;户&nbsp;&nbsp;名</span>
+                        <input value="admin" type="text" name="username" required class="form-control" placeholder="请输入用户名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon input-intr"><i class="icon iconfont icon-lock"></i>&nbsp;&nbsp;登录密码</span>
+                        <input value="123456" type="password" name="password" required class="form-control" placeholder="请输入登录密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon input-intr"><i class="icon iconfont icon-bangzhu"></i>&nbsp;&nbsp;验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+                        <input value="121111" required maxlength="6" type="tel" name="code" class="form-control" placeholder="请输入验证码">
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input required checked class="icheck" name="remember" type="checkbox">&nbsp;&nbsp;&nbsp;记住我
+                    </label>
+                </div>
+                <button title="点击登录进入后台管理中心" type="submit" class="btn btn-default btn-danger btn_width">登录</button>
+            </form>
+            <p class="footer">2016年02月20日 21:50:59</p>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/iCheck/1.0.2/icheck.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-red',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的课程表</title>
+    <style>
+        *{margin:0px;padding:0px;}
+        .container{ width:1000px;  height:660px;  border:1px solid #555A5C;  border-radius:5px;  box-shadow: 10px 10px 5px #888888;;  margin: 100px auto;  background: #739F1F;  overflow: hidden;  }
+         table{ text-align: center;  width:100%;  height:611px; background:white; }
+         td{border:1px dotted #ddd;}
+         th{color:white;  height:50px;}
+        .cor-week{background: #0D98AF;}
+        .mon{background: #F081C3;}
+        .tue{background: #2D941A;}
+        .wed{background: #7032A0;}
+        .thu{background: #E03134;}
+        .fri{background: #237ED6;}
+        .sat{background: #E3F24E;}
+        .sun{background: darkgreen;}
+        .am{color:#000; background: #EDF680;}
+        .pm{color:#000; background: #FBF5AF;}
+        .night,.morning{color:#000;background: #FBFDD8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table cellpadding="0" cellspacing="0">
+            <caption style="color:white;height:50px;line-height: 50px;"><h1>Web大前端工程师第七期就业班2班 课程表</h1></caption>
+            <thead>
+                <tr><th class="cor-week" colspan="2">节数\课程\星期</th><th class="mon">星期一</th><th class="tue">星期二</th><th class="wed">星期三</th><th class="thu">星期四</th><th class="fri">星期五</th><th class="sat">星期六</th><th class="sun">星期天</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="morning" >早自习</td><td colspan="6">早自习</td><td class="week" rowspan="15" colspan="2">周末休息</td></tr>
+                <tr><td class="mid" colspan="7">早餐休息时间</td></tr>
+
+                <tr><td class="am" rowspan="4">上午</td><td class="course">第一节</td><td>语文</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="course">第二节</td><td></td><td></td><td>物理</td><td></td><td></td></tr>
+                <tr><td class="course">第三节</td><td></td><td></td><td></td><td></td><td>历史</td></tr>
+                <tr><td class="course">第四节</td><td></td><td></td><td></td><td>数学</td><td></td></tr>
+                <tr><td class="mid" colspan="7">中午休息时间</td></tr>
+
+                <tr><td class="pm" rowspan="4">下午</td><td class="course">第五节</td><td>数学</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="course">第六节</td><td></td><td>历史</td><td></td><td></td><td></td></tr>
+                <tr><td class="course">第七节</td><td></td><td></td><td></td><td>政治</td><td></td></tr>
+                <tr><td class="course">第八节</td><td></td><td></td><td></td><td></td><td>地理</td></tr>
+                <tr><td class="mid" colspan="7">晚餐休息时间</td></tr>
+
+                <tr><td class="night" rowspan="3">晚自习</td><td class="course">第九节</td><td>英语</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="course">第十节</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="course">第十一节</td><td></td><td></td><td>化学</td><td></td><td>生物</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

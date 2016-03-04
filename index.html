@@ -1,68 +1,148 @@
-
-<html>
-	<head>
-		<title>Zhou Shuai ௵~周</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="zhou Shuai,௵~,௵~周,周帅 github，Cool Jhou,个人作品展示">
-		<meta name="description" content="zhou Shuai,௵~,௵~周,周帅 github，Cool Jhou,个人作品展示">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
-		<link rel="stylesheet" href="css/index.css">
-		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-		<style type="text/css">
-			body{
-				margin:0;
-			}
-			#progress {
-				height: 2px;
-				background:#b91f1f;
-				-webkit-animation:pulse 3s;
-				animation:pulse 3s;
-			}
-			@-webkit-keyframes pulse{
-				0%{width:0;}
-				100%{width:100%;}
-			}
-			
-			@keyframes pulse{
-				0%{width:0;}
-				100%{width:100%;}
-			}
-			#progress.done {
-				opacity:0
-			}
-		</style>
-	</head>
-	<body>
-		<div id="progress"></div>
-		<p style="text-align:center;margin-top:10%;line-height:50px;">
-			<b>
-			Welcome! I'm Cool Jhou!<br/>
-			This is my first github page .<br/>
-			To be continued, please looking forward .......<br/>
-			</b>
-		</p>
-		<div class="toolbar">
-			<a href="javascript:void(0);" class="toolbar-item toolbar-item-weixin">
-				<span class="toolbar-btn">
-					
-				</span>
-			</a>
-			<a href="javascript:void(0);" class="toolbar-item toolbar-item-feedback">
-				<span class="toolbar-btn">
-					
-				</span>
-			</a>
-			<a href="javascript:void(0);" class="toolbar-item toolbar-item-app">
-				<span class="toolbar-btn">
-					
-				</span>
-			</a>
-			<a href="javascript:void(0);" class="toolbar-item toolbar-item-top">
-				<span class="toolbar-btn">
-					
-				</span>
-			</a>
-		</div>
-	</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Welcome To ௵~周の开发日常</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!--顶部导航-->
+        <div id="header">
+            <div id="nav">
+                <a href="index.html" id="logo-diy">
+                    <img src="./images/zhoushuai3.png" title="Jhou Shuai" alt="周帅" class="logo" />
+                </a>
+                <div class="sethome">设为首页</div>
+                <ul class="zone">
+                    <li class="city-weather">
+                        <a class="a-city" href="javascript:void(0);">成都</a>
+                        <a class="a-weather" href="javascript:void(0);">多云7 ~ 0℃</a>
+                    </li>
+                    <li class="date">
+                        <a class="a-date" href="javascript:void(0);">2016年02月14日&nbsp;&nbsp;周日(情人节)</a>
+                    </li>
+                    <li title="我的邮箱:shuai959980629@163.com" class="email">
+                        <a  class="a-email" href="javascript:void(0);">我的邮箱:<span  class="myemail">shuai959980629@163.com</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--中间内容-->
+        <div id="content">
+            <!--baidu搜索-->
+            <div id="baidu">
+                <div class="search-div">
+                    <!-- LOGO -->
+                    <img  hidefocus="true" src="images/webv2.png"  title="百度一下，你就知道" align="百度一下，你就知道"/>
+                    <!-- 百度搜索框 表单提交-->
+                    <form action="http://www.baidu.com/s" method="get" target="_blank">
+                        <div class="div-input">
+                            <div class="float-left">
+                                <input type="text" id="search-input" autofocus="true" autocomplete="off"  value="" name="wd" class="search-inpt" />
+                            </div>
+                            <div class="float-left">
+                                <input class="btn-submit" type="submit"  value="百度一下" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--中间内容导航-->
+            <div class="mid-nav">
+                <ul>
+                    <li><a id="home" class="home on" href="index.html">首页</a></li>
+                    <li><a id="qrj" class="qrj">2.14</a></li>
+                </ul>
+            </div>
+            <!--主要内容展示：双飞翼布局（三列）-->
+            <div class="main">
+                <div class="middle">
+                    <div class="inner">
+                        <div class="list-title">
+                            <span>&nbsp;&nbsp;2.14(情人节)</span>
+                            <a class="set-icon" href="javascript:void(0);"></a>
+                        </div>
+                        <canvas id="c"></canvas>
+                        <div  class="heart">
+                            I <br/>&nbsp;&nbsp;&nbsp;LOVE<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOU <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOREVER !
+                            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="chinlove">我爱你</span>
+                            <span class="love">
+                                &nbsp;&nbsp;&nbsp;情人节快乐，关心你，呵护你，<br/>陪伴你，爱着你！！！！<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---Jhou Shuai
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--项目列表-->
+                <div class="left">
+                    <div class="list-title">
+                        <span>&nbsp;&nbsp;项目列表</span>
+                        <a class="set-icon" href="javascript:void(0);"></a>
+                    </div>
+                    <ul class="product">
+                        <li><a target="_blank" href="baidu.html">baidu</a></li>
+                        <li><a target="_blank" href="course.html">我的课程表</a></li>
+                        <li><a target="_blank" href="reg.html">注册页面</a></li>
+                        <li><a target="_blank" href="3dBox.html">3D魔方</a></li>
+                        <li><a target="_blank" href="jianbihua.html">CSS3简笔画</a></li>
+                        <li><a target="_blank" href="oaindex.html">业务管理系统</a></li>
+                        <li><a target="_blank" href="first.html">第一阶段：html+css前端面试题</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="list-title">
+                        <span>&nbsp;&nbsp;我的博客</span>
+                        <a class="set-icon" href="javascript:void(0);"></a>
+                    </div>
+                    <ul class="product">
+                        <li><a target="_blank" title="博客园" href="javascript:void(0);">博客园</a></li>
+                        <li><a target="_blank" title="W3Cschool" href="javascript:void(0);">W3Cschool</a></li>
+                        <li><a target="_blank" title="Mozilla 开发者网络" href="javascript:void(0);">Mozilla 开发者网络</a></li>
+                        <li><a target="_blank" title="CNode：Node.js专业中文社区" href="javascript:void(0);">CNode：Node.js专业中文社区</a></li>
+                        <li><a target="_blank" title="HTML5中国：中国最大的HTML5中文门户" href="javascript:void(0);">HTML5中国：中国最大的HTML5中文门户</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfloat"></div>
+            <!--图片区域-->
+            <div class="images-zone">
+                <div class="div-img div-img-0"><img class="img-0" src="images/0.jpg" title="我是第一个111111111111正常盒子" alt="0" /></div>
+                <div class="div-img div-img-1"><img class="img-1" src="images/1.jpg" title="我是第二个2222222222怪异盒子" alt="1" /></div>
+                <div class="div-img div-img-2"><img class="img-2" src="images/2.jpg" title="我是第三个3333333333" alt="2" /></div>
+                <div class="div-img div-img-2"><img class="img-2" src="images/zhoushuai30.png" title="我是第三个3333333333" alt="2" /></div>
+                <div class="div-img div-img-2"><img class="img-2" src="images/3.jpg" title="我是第三个3333333333" alt="2" /></div>
+            </div>
+        </div>
+        <!--尾部-->
+        <div id="footer">
+            <div class="footer-div">
+                <!-- 手机百度 -->
+                <div class="div-img-qrcode">
+                    <img src="images/qrcode_for_gh_a201bf09c8eb_344.jpg"/>
+                </div>
+                <div class="div-qrcode"><p><b>我的微信</b></p><p><span class="gry-footer">资料库</span></p></div>
+                <!--百度糯米-->
+                <div class="div-img-qrcode">
+                    <img src="images/qrcode_for_gh_a201bf09c8eb_344.jpg"/>
+                </div>
+                <div class="div-qrcode"><p><b>微信内容</b></p><p><span class="gry-footer">随时看！</span></p></div>
+                <!--about BAIDU-->
+                <div class="div-baidu-about">
+                    <p class="p-footer"> 若有雷同纯属巧合！！！(><)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&copy;</span>2016&nbsp;Jhou Shuai&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var b = document.body;
+        var c = document.getElementsByTagName('canvas')[0];
+        var a = c.getContext('2d');
+        document.body.clientWidth;
+    </script>
+    <script type="text/javascript">
+        with(m=Math)C=cos,S=sin,P=pow,R=random;c.width=c.height=f=600;h=-250;function p(a,b,c){if(c>60)return[S(a*7)*(13+5/(.2+P(b*4,4)))-S(b)*50,b*f+50,625+C(a*7)*(13+5/(.2+P(b*4,4)))+b*400,a*1-b/2,a];A=a*2-1;B=b*2-1;if(A*A+B*B<1){if(c>37){n=(j=c&1)?6:4;o=.5/(a+.01)+C(b*125)*3-a*300;w=b*h;return[o*C(n)+w*S(n)+j*610-390,o*S(n)-w*C(n)+550-j*350,1180+C(B+A)*99-j*300,.4-a*.1+P(1-B*B,-h*6)*.15-a*b*.4+C(a+b)/5+P(C((o*(a+1)+(B>0?w:-w))/25),30)*.1*(1-B*B),o/1e3+.7-o*w*3e-6]}if(c>32){c=c*1.16-.15;o=a*45-20;w=b*b*h;z=o*S(c)+w*C(c)+620;return[o*C(c)-w*S(c),28+C(B*.5)*99-b*b*b*60-z/2-h,z,(b*b*.3+P((1-(A*A)),7)*.15+.3)*b,b*.7]}o=A*(2-b)*(80-c*2);w=99-C(A)*120-C(b)*(-h-c*4.9)+C(P(1-b,7))*50+c*2;z=o*S(c)+w*C(c)+700;return[o*C(c)-w*S(c),B*99-C(P(b, 7))*50-c/3-z/1.35+450,z,(1-b/1.2)*.9+a*.1, P((1-b),20)/4+.05]}}setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}',0)
+    </script>
+</body>
 </html>
