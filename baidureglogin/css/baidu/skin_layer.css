@@ -1,0 +1,491 @@
+/*皮肤管理*/
+.skin-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -10;
+    zoom: 1;
+}
+/*皮肤列表*/
+.skin-layer{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    cursor: default;
+    background: #fff;
+    z-index: 1113;
+    opacity: 1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    display: none;
+}
+.skin-layer-nav{
+    width: 100%;
+    height:46px;
+    line-height: 46px;
+    border-bottom: 1px solid #E3E3E3;
+}
+.skin-layer-nav .s-skin-header{
+    width: 911px;
+    height:100%;
+    margin:0 auto;
+
+}
+
+.skin-layer-nav .skin-nav, .s-skin-layer .nav-vertial {
+    cursor: pointer;
+    height: 46px;
+    padding: 0 10px;
+    font-size: 13px;
+    float: left;
+    background: none;
+    transition: background 500ms;
+    -moz-transition: background 500ms;
+    -o-transition: background 500ms;
+    -webkit-transition: background 500ms;
+}
+
+div.skin-layer-nav .skin-nav, .s-skin-layer .nav-vertial {
+    padding: 0 8px !important;
+}
+
+.skin-layer-nav .skin-nav .skinnav-nav-name {
+    color: #666;
+}
+
+
+.skin-layer-nav .choose-nav {
+    background: #389cff;
+}
+
+.skin-layer-nav .skin-nav:hover {
+    background: #389cff;
+}
+
+.skin-layer-nav .skin-nav:hover .skinnav-nav-name, .skin-layer-nav .choose-nav .skinnav-nav-name {
+    color: #fff;
+}
+
+
+.skin-layer-nav .nav-vertial-border {
+    height: 15px;
+    width: 1px;
+    overflow: hidden;
+    float: left;
+    margin:15px 10px;
+    background: #dedede;
+    zoom: 1;
+}
+
+.skin-layer-nav .s-skin-setting {
+    float: right;
+}
+
+.s-skin-opacity-set {
+    color: #666;
+    float: left;
+    width: 170px;
+    height:100%;
+}
+.s-skin-opacity-set .bg-hideOrShowAjax {
+    display: block;
+    visibility:visible;
+    width: 100%;
+}
+.s-skin-opacity-set .bg-alphaBarTitle {
+    font-size: 13px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.s-skin-opacity-set .bg-alphaBar, .s-skin-opacity-set .bg-alphaBarMoveBtn {
+    display: inline-block;
+}
+
+
+.s-skin-opacity-set .bg-alphaBar {
+    position: relative;
+    width: 80px;
+    height: 4px;
+    border: 1px solid #e1e1e1;
+    background: #f2f2f2;
+    font-size: 0;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.s-skin-opacity-set .bg-alphaBarMoveBtn {
+    position: absolute;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.s-skin-opacity-set .bg-alphaBarOpacity {
+    font-size: 11px;
+    display: block;
+    width: 28px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    position: absolute;
+    top: -16px;
+    left: -8px;
+    color: #666;
+    cursor: default;
+}
+
+.skin-layer .s-skin-set{
+    float: left;
+    cursor: pointer;
+    margin-left: 30px;
+    width: 87px;
+}
+
+.skin-layer .s-skin-set span {
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.skin-layer .s-skin-set .skinset-title {
+    color: #666;
+    margin-left: 3px;
+}
+
+
+.skin-layer .skin-bg-icon {
+    font-size: 13px;
+    background: url('../../images/skin_icon_82b6ef5b.png') no-repeat -1000px -1000px;
+}
+
+
+.skin-layer .s-skin-up {
+    cursor: pointer;
+    float: left;
+    width: 40px;
+    margin-left: 25px;
+    color: #0079f5;
+}
+
+.skin-layer .s-skin-up span {
+    display: block;
+    float: left;
+}
+
+.skin-layer .s-skin-up .bg {
+    margin-right: 2px;
+    background: url('../../images/skin_icon_82b6ef5b.png') no-repeat -44px -175px;
+    width: 11px;
+    height: 15px;
+    margin-top: 15px;
+}
+.skin-layer .skin-has-bg .skinset-hasBg {
+    background-position: -24px -176px;
+    width: 14px;
+    height: 13px;
+}
+
+.skin-layer .s-skin-set span {
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    vertical-align: middle;
+}
+.skin-layer .skin-has-bg:hover span{
+    color:#0079f5;
+}
+
+.skin-layer .skin-has-bg:hover .skinset-hasBg{
+    background-position: -24px -192px;
+}
+
+/*皮肤(图片)列表body*/
+.skin-layer .s-skin-photo-body {
+    position: relative;
+    width: 911px;
+    margin: 0 auto;
+}
+.skinphotopadding{
+    padding: 25px 0 0 0;
+}
+.skin-layer .s-skin-photo-body .s-skin-towTabNav{
+    height:40px;
+    line-height:40px;
+    display:none;
+}
+
+.skin-layer .s-skin-photo-body .s-skin-towTabNav ul li{
+    display: inline-block;
+    width:70px;
+    text-align: center;
+}
+
+.skin-layer .s-skin-photo-body .s-skin-towTabNav ul li a{
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+}
+
+.skin-layer .s-skin-photo-body .s-skin-towTabNav ul li a:hover{
+    color: #0079f5;
+}
+
+.skin-layer .s-skin-photo-body .s-skin-towTabNav .cur a {
+    color: #0079f5;
+}
+
+
+
+
+
+
+.skin-layer .s-skin-photo-body .s-skin-photo-list{
+    height:200px;
+    width:100%;
+    position: relative;
+}
+
+.skin-layer .skin-img-list{
+    display: none;
+    height: 100%;
+    width: 600px;
+    float: left;
+}
+
+.skin-layer .skin-img-list:first-child{
+    display: block;
+}
+
+.skin-layer .skin-img-list li {
+    display: block;
+    height: 186px;
+    overflow: hidden;
+    float: left;
+    border:1px solid #FFFFFF;
+}
+
+.skin-layer .skin-img-list .skin-img-item {
+    position: absolute;
+    cursor: pointer;
+    height: 59px;
+    width: 97px;
+}
+
+
+.skin-layer .skin-img-list .skin-img-item .skin-bg-icon{
+    background: url('../../images/skin_icon_png24_62d35ae7.png') no-repeat -1000px -1000px;
+}
+
+.skin-layer .skin-img-list .skin-img-item .skin-img-item-choose{
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background-position: -180px 0;
+    display: none;
+}
+
+
+.skin-layer .skin-img-list .big-img-li {
+    width: 195px;
+    height: 119px;
+}
+
+.skin-layer .skin-img-list .pos-0 {
+    top: 0;
+    left: 0;
+}
+
+
+.skin-layer .skin-img-list .pos-1 {
+    top: 120px;
+    left: 0;
+}
+
+
+.skin-layer .skin-img-list .pos-2 {
+    top: 120px;
+    left: 98px;
+}
+
+.skin-layer .skin-img-list .pos-3 {
+    top: 0;
+    left: 196px;
+}
+.skin-layer .skin-img-list .pos-4 {
+    top:60px;
+    left: 196px;
+}
+
+.skin-layer .skin-img-list .pos-5 {
+    top:120px;
+    left: 196px;
+}
+
+.skin-layer .skin-img-list .pos-6 {
+    top: 0;
+    left: 294px;
+}
+
+.skin-layer .skin-img-list .pos-7 {
+    top: 0;
+    left:392px;
+}
+
+.skin-layer .skin-img-list .pos-8 {
+    top: 60px;
+    left: 294px;
+}
+.skin-layer .skin-img-list  .pos-9 {
+    top: 0;
+    left: 490px;
+}
+
+.skin-layer .skin-img-list  .pos-10 {
+    top: 60px;
+    left: 490px;
+}
+
+.skin-layer .skin-img-list  .pos-11 {
+    top: 120px;
+    left: 490px;
+}
+
+img {
+    border: 0;
+}
+
+.skin-layer .skin-img-list .skin-img-item img{
+    width: 97px;
+    height: 59px;
+    line-height: 59px;
+}
+
+.skin-layer .skin-img-list .big-img-li img{
+    width: 195px;
+    height: 119px;
+    line-height: 119px;
+}
+
+
+
+
+
+
+
+
+/*预览*/
+.skin-layer .s-skin-preview {
+    float: right;
+    width: 294px;
+    height: 100%;
+}
+
+.skin-layer .preview-view {
+    position: relative;
+    float: right;
+    width: 264px;
+    height: 180px;
+    overflow: hidden;
+}
+
+
+.skin-layer .preview-view-container {
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    width: 260px;
+    height: 163px;
+    overflow: hidden;
+}
+
+
+.skin-layer .preview-whitelogo .preview-pageUI {
+   background-position: 0 0;
+}
+.skin-layer .preview-bluelogo .preview-pageUI{
+    background-position: -275px 0;
+}
+
+.skin-layer .preview-pageUI {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 264px;
+    height: 180px;
+    background: url('../../images/skin_preview_05c7c9e3.png') no-repeat -1000px -1000px;
+}
+
+.skin-layer .preview-title {
+    float: right;
+    margin-right: 0;
+    margin-top:25px;
+    text-align: center;
+    width: 262px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+/*自动更换*/
+.skin-layer .s-skin-photo-body .s-skin-photo-footer{
+    height:40px;
+    line-height:40px;
+    width: 100%;
+    position: relative;
+}
+
+
+.skin-layer .s-skin-photo-body .s-skin-photo-footer .s-random-bg {
+    width: 115px;
+    height: 33px;
+    line-height: 33px;
+    color: #666;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    padding-left: 25px;
+    z-index: 1;
+}
+
+.skin-layer .s-skin-photo-body .s-skin-photo-footer .s-random-fontColor {
+    color: #38f;
+}
+
+
+
+.skin-layer .s-skin-photo-body .s-skin-photo-footer .s-random-input {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    _overflow: hidden;
+}
+
+.skin-layer .s-skin-photo-body .s-skin-photo-footer .s-random-open {
+    border: 1px solid #38f;
+    background: url(../../images/skin_random_0e441052.png) no-repeat 2px 3px;
+}
+
+
+
+
+
+
+

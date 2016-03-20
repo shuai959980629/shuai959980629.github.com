@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hao123</title>
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="skin-theme-mosi">
+    <!--主容器-->
+    <div class="container width-lg">
+        <div id="layoutContainer" class="layout-container">
+            <!--头部-->
+            <div class="header-wrapper">
+                <div class="header-nav">
+                    <!--LOGO-->
+                    <div class="logo-wrapper">
+                        <a class="logo-a" href="javascript:void(0);">
+                            <img class="img-hook" src="images/logo201509091.png" width="190" height="60" alt="上网从hao123开始">
+                        </a>
+                        <a href="javascript:void(0);" class="sethome">
+                            <span>设为首页</span>
+                        </a>
+                    </div>
+                    <div class="weather-wrapper">
+                        <a href="javascript:void(0);"   class="weather">
+                            <span class="weahtercity-name">成都</span>
+                            <span class="weahterinfo-txt">多云 23 ~ 12℃</span>
+                        </a>
+                        <a href="javascript:void(0);" class="date">
+                            <span class="calendarinfo-date">06</span>
+                            <span class="calendarinfo-month">3月06日</span>
+                            <span class="calendarinfo-day">周日</span>
+                        </a>
+                    </div>
+                    <div class="user-wrapper">
+                        <a href="javascript:void(0);" class="login">登陆</a>
+                        <a href="javascript:void(0);" class="email">邮箱</a>
+                        <a href="javascript:void(0);" class="explore">浏览器</a>
+                        <a href="javascript:void(0);" id="skin-btn" class="skin-btn">换肤</a>
+                    </div>
+                    <div class="skin-list-wrapper">
+                        &copyJhou Shuai
+                    </div>
+                    <!--皮肤列表-->
+                    <div id="skin-list-container" class="skin-list-container">
+                        <div class="tip"></div>
+                        <ul id="select-skin-item" class="skin-photo-list">
+                            <li  class="skin-item">
+                                <img  data-type="skin-theme-rabbit" src="images/8e5d37a30939eacb9d5a8c4e3a6632d4.jpg"  />
+                            </li>
+                            <li  class="skin-item">
+                                <img data-type="skin-theme-yonger" src="images/cb620a4888804cbcc82abad08a1686da.jpg"  />
+                            </li>
+                            <li  class="skin-item">
+                                <img data-type="skin-theme-mosi" src="images/f2c06a3a628f1164003db1569a712b18.jpg"  />
+                            </li>
+                            <li  class="skin-item">
+                                <img data-type="skin-theme-emily" src="images/bef59c8e58cb93ef694290d0fef9916b.jpg"  />
+                            </li>
+                            <li  class="skin-item">
+                                <img data-type="skin-theme-miku" src="images/bebf502c7e842153fcd1f52ed362bf46.jpg"  />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-bg"></div>
+            </div>
+            <!--中间搜索-->
+            <div class="middle-wrapper">
+                <form class="form-hook" id="search-form" action="https://www.baidu.com/s" target="_blank">
+                    <div class="search-box">
+                        <a href="javascript:void(0);" class="baidu"></a>
+                        <div class="search-inpt-box">
+                             <div class="input-box">
+                                 <input class="input input-hook" type="text" autocomplete="off" maxlength="100" name="word"/>
+                             </div>
+                             <div class="hot-search-box">
+                                 <a href="javascript:void(0);">成都天气</a>
+                                 <a href="javascript:void(0);">NBA</a>
+                                 <a class="red" href="javascript:void(0);">LOL-IEM Champion</a>
+                                 <a href="javascript:void(0);">跑男4阵容公布</a>
+                                 <a href="javascript:void(0);">歌手4</a>
+                             </div>
+                         </div>
+                        <div class="btn-search">
+                            <input class="subtn" type="submit" value="" />
+                        </div>
+                    </div>
+                 </form>
+            </div>
+            <!--正文-->
+            <div class="wrapper">
+                <!--菜单-->
+                <ul class="menu-wrapper">
+                    <li class="active"><a href="javascript:void(0);">首页</a></li>
+                    <li><a href="javascript:void(0);">电视剧</a></li>
+                    <li><a href="javascript:void(0);">最新电影</a></li>
+                    <li><a href="javascript:void(0);">新闻头条</a></li>
+                    <li><a href="javascript:void(0);">八卦娱乐</a></li>
+                </ul>
+                <!--左右两侧内容-->
+                <div class="content">
+                    <!--左边-->
+                    <div class="left-wrapper">
+                        <div class="servicetab">
+                            <ul class="starbar">
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-tv"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电视剧</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">综艺</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-game"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">游戏</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">小游戏</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-movie"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电影</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">直播</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-comic"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">动漫</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">漫画</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-toutiao"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">头条</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">军事</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-travel"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电影</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">直播</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-tv"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电视剧</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">综艺</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-game"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">游戏</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">小游戏</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-movie"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电影</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">直播</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-comic"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">动漫</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">漫画</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-toutiao"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">头条</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">军事</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-travel"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电影</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">直播</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-tv"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">电视剧</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">综艺</a>
+                                    </div>
+                                </li>
+                                <li class="starbar-list">
+                                    <div class="category">
+                                        <i class="star-icon i-game"></i>
+                                        <a href="javascript:void(0);" title="电视剧" class="baritem-link">游戏</a>
+                                        <span class="split">|</span>
+                                        <a href="javascript:void(0);" title="综艺" class="baritem-link">小游戏</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--右边-->
+                    <div class="right-wrapper">
+                        <!--网站列表-->
+                        <div class="website-list">
+                            <div class="set-box">
+                                <div class="set-btn"></div>
+                            </div>
+                            <ul class="site-hot">
+                                <li class="site-hot-list">
+                                    <img src="images/7656.png" />
+                                    <a  href="javasript:void(0);">百度</a>
+                                    &nbsp;•&nbsp;
+                                    <a href="javasript:void(0);">贴吧</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/9898.png" />
+                                    <a  href="javasript:void(0);">新浪</a>
+                                    &nbsp;•&nbsp;
+                                    <a href="javasript:void(0);">微博</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/9935.png" />
+                                    <a  href="javasript:void(0);">搜狐</a>
+                                    &nbsp;•&nbsp;
+                                    <a href="javasript:void(0);">热点</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/7082.png" />
+                                    <a  href="javasript:void(0);">腾&nbsp;&nbsp;讯</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/7183.png" />
+                                    <a  href="javasript:void(0);">网&nbsp;&nbsp;易</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/10605.png" />
+                                    <a  href="javasript:void(0);">优&nbsp;酷&nbsp;网</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/21.1.png" />
+                                    <a  href="javasript:void(0);">京东商城</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/1419388771.png" />
+                                    <a  href="javasript:void(0);">hao123影视</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/6282.png" />
+                                    <a  href="javasript:void(0);">今日特价</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/7183.png" />
+                                    <a  href="javasript:void(0);">网&nbsp;&nbsp;易</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/10605.png" />
+                                    <a  href="javasript:void(0);">优&nbsp;酷&nbsp;网</a>
+                                </li>
+                                <li class="site-hot-list">
+                                    <img src="images/21.1.png" />
+                                    <a  href="javasript:void(0);">京东商城</a>
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                            <ul class="famous-site">
+                                <li class="famous-site-list"><a href="javascript:void(0);">东方财富</a>&nbsp;•&nbsp;<a href="javascript:void(0);">理财</a></li>
+                                <li class="famous-site-list"><a href="javascript:void(0);">58&nbsp;同&nbsp;城</a></li>
+                                <li class="famous-site-list"><a href="javascript:void(0);">搜&nbsp;房&nbsp;网</a></li>
+                                <li class="famous-site-list"><a href="javascript:void(0);">携程旅行网</a></li>
+                                <li class="famous-site-list"><a href="javascript:void(0);">PPTV聚力</a></li>
+                                <li class="famous-site-list"><a href="javascript:void(0);">12306</a>&nbsp;•&nbsp;<a href="javascript:void(0);">旅游</a></li>
+                                <li class="famous-site-list"><a class="red" href="javascript:void(0);">苏宁易购</a></li>
+                                <li class="famous-site-list"><a href="javascript:void(0);">同程旅游</a></li>
+                                <li class="famous-site-list"><a class="green" href="javascript:void(0);">国美在线</a></li>
+                                <li class="famous-site-list"><a class="green" href="javascript:void(0);">珍爱婚恋网</a></li>
+                                <li class="famous-site-list"><a class="green" href="javascript:void(0);">1&nbsp;号&nbsp;店</a></li>
+                                <li class="famous-site-list"><a class="green" href="javascript:void(0);">爱&nbsp;淘&nbsp;宝</a></li>
+                                <li class="famous-site-list"><a class="green" href="javascript:void(0);">携程机票</a></li>
+                                <li class="famous-site-list"><a class="primary" href="javascript:void(0);">途牛旅游网</a></li>
+                                <li class="famous-site-list"><a class="primary" href="javascript:void(0);">购物大全</a></li>
+                                <li class="famous-site-list"><a class="primary" href="javascript:void(0);">太平洋汽车</a></li>
+                                <li class="famous-site-list"><a class="primary" href="javascript:void(0);">百度杀毒</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">陆金所理财</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">中华英才网</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">聚美优品</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">hao&nbsp;到&nbsp;家</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">在线学习</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">萌&nbsp;主&nbsp;页</a></li>
+                                <li class="famous-site-list"><a class="yellow" href="javascript:void(0);">在线学习</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skin-bg"></div>
+    </div>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

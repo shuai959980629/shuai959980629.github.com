@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 计算器 -->
+        <div class="center-block">
+            <div class="title">计算器</div>
+            <div class="calu-container">
+                <table id="calculator">
+                    <tbody>
+                        <tr><!--显示器-->
+                            <td  colspan="5">
+                                <input  value="0" readonly class="result" id="result" type="text"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" data-type="delte"  title="将光标左边第一个删除" class="btn btn-danger">×</button></td>
+                            <td><button type="button" data-type="clear"  title="全清" class="btn btn-danger">全清</button></td>
+                            <td><button type="button" data-type="clear"  title="将显示屏的数字清空为零" class="btn btn-danger">清屏</button></td>
+                            <td><button type="button" data-type="abs"    title="正/负" class="btn btn-primary">+/—</button></td>
+                            <td><button type="button" data-type="recip"  title="倒数" class="btn btn-primary">1/x</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" data-type="7" class="btn btn-default">7</button></td>
+                            <td><button type="button" data-type="8" class="btn btn-default">8</button></td>
+                            <td><button type="button" data-type="9" class="btn btn-default">9</button></td>
+                            <td><button type="button" data-type="÷" class="btn btn-primary">÷</button></td>
+                            <td><button type="button" data-type="%" id="percent" class="btn btn-primary">%</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" data-type="4" class="btn btn-default">4</button></td>
+                            <td><button type="button" data-type="5" class="btn btn-default">5</button></td>
+                            <td><button type="button" data-type="6" class="btn btn-default">6</button></td>
+                            <td><button type="button" data-type="×" class="btn btn-primary">×</button></td>
+                            <td><button type="button" data-type="√" class="btn btn-primary">√</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" data-type="1" class="btn btn-default">1</button></td>
+                            <td><button type="button" data-type="2" class="btn btn-default">2</button></td>
+                            <td><button type="button" data-type="3" class="btn btn-default">3</button></td>
+                            <td><button type="button" data-type="－" class="btn btn-primary">－</button></td>
+                            <td rowspan="2"><button  type="button" data-type="＝" class="btn btn-primary equal">＝</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="button" data-type="0" class="btn btn-default zero">0</button></td>
+                            <td><button type="button" data-type="." class="btn btn-default">.</button></td>
+                            <td><button type="button" data-type="＋" class="btn btn-primary">＋</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">@2015-03-05 16:30  Jhou shuai</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

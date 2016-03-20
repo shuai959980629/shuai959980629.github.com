@@ -1,0 +1,234 @@
+/*热门，最新。免费，项目实战，首发，企业合作 导航*/
+
+.nav-lesson {
+    margin: 0 auto;
+}
+
+.nav-lesson-list {
+    height: 41px;
+    background: url(../../images/jike/hotnav_bc_f22b37e.jpg) 0 100% repeat-x;
+}
+
+.nav-lesson ul li {
+    width: 16.6%;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.nav-lesson ul li.on {
+    border-bottom: 2px solid #35b558;
+    background: url(../../images/jike/index-sj_cc73747.png) center bottom no-repeat;
+    background-size: 10px 4px;
+    color: #35b558;
+}
+
+
+/*热门，最新。免费，项目实战，首发，企业合作 列表  z-index 无效是为什么？*/
+
+.lesson-list-box {
+    margin: 0 auto;
+    position: relative;
+}
+
+.lesson-list-box .lesson-list-div {
+    display: none;
+}
+
+.lesson-list-box .lesson-list-div-active{
+    display:block;
+}
+
+.lesson-list-box .lesson-list-div ul li {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    width: 235px;
+    height: 230px;
+}
+
+.lessonimg-box {
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+    width: 235px;
+    height: 130px;
+    position: relative;
+}
+
+.lessonimg-box .lesson-shoucang {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    display: none;
+    background: url(../../images/jike/shoucang-1_76dc56f.png);
+    background-size: 16px 16px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.lessonimg-box .lesson-shoucangshow {
+    display: block;
+}
+
+.lessonimg-box .lessonimg {
+    width: 100%;
+    height: 130px;
+}
+
+.lessonimg-box .lessonplay {
+    background: #000;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: none;
+}
+
+.lessonimg-box .lessonplayshow {
+    opacity: 1;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.lessonimg-box .lessonplay .playericon {
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(../../images/jike/player_icon_5c67475.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 50px 50px;
+}
+
+.lesson-shoucang:hover {
+    background: url(../../images/jike/shoucang-2_3d597dc.png);
+    background-size: 16px 16px;
+}
+
+.lesson-infor {
+    border: 1px solid #cccccc;
+    border-top: 0;
+    background: #fff!important;
+    position: relative;
+    z-index: 200;
+    border-radius: 3px;
+}
+
+.lesson-infor .lesson-info-h2 {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.lesson-infor .lesson-info-h2 a,
+.lesson-infor .lesson-info-h2 a:hover {
+    display: block;
+    height: 36px;
+    color: #333;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.lesson-infor .timeandicon {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+
+.timelevel {
+    height: 20px;
+}
+
+.lesson-infor .timeandicon dl {
+    width: 120px;
+    float: left;
+    white-space: nowrap;
+}
+
+.lesson-infor .timeandicon dl dd {
+    margin: 10px 10px;
+}
+
+.lesson-infor .timeandicon .time-icon {
+    background: url(../../images/jike/clok_a413ecf.png) 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: 14px 14px;
+}
+
+.lesson-infor .timeandicon .xinhao-icon {
+    background: url(../../images/jike/one-ji_1731712.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.lesson-infor .timeandicon .learn-number {
+    float: right;
+    padding: 10px;
+}
+
+.lesson-infor .lessonicon-box {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-align: right;
+    bottom: 4px;
+}
+
+.lesson-infor .lessonicon-boxshow {
+    top: 35px;
+}
+
+.lesson-infor .lesson-info-description {
+    display: none;
+    color: gray;
+    font-size: 12px;
+    line-height: 18px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 10px;
+}
+
+.lesson-infor .lesson-info-descriptionshow {
+    opacity: 1;
+    height: 52px;
+    display: block;
+}
+
+.zhongji,
+.learn-number {
+    display: none;
+}
+
+.zhongjishow,
+.learn-numbershow {
+    display: block;
+}

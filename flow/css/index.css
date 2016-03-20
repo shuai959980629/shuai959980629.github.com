@@ -1,0 +1,218 @@
+body{
+    font-family: "Microsoft YaHei", "Heiti SC", simhei, "Lucida Sans Unicode", "Myriad Pro", "Hiragino Sans GB", Verdana !important;
+    font-size: 12px;
+    background: #fff;
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+    background:url(../images/body_bg.png)
+}
+
+
+body, div,span,input{
+    margin: 0;
+    padding: 0;
+}
+
+
+ul{
+    list-style-type: none;
+    list-style-image: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+div{
+    margin:0;
+    padding:0;
+}
+
+.containter{
+    width: 100%;
+    height:100%;
+
+}
+.header{
+    width: 100%;
+    height:auto;
+    border-bottom: 1px solid #B8B8B8;
+    box-shadow: 0 0 3px #B8B8B8;
+}
+.center-wrapper{
+    min-width:800px;
+    margin: 0 auto;
+}
+
+.nav-wrapper li{
+    display: inline-block;
+    width: 40px;
+}
+.nav-wrapper li:first-child{
+    margin-left:115px;
+}
+
+.nav-wrapper li a{
+    display: block;
+    padding-top:10px;
+    font-size: 14px;
+    color:#555;
+}
+.current{
+    color: #333;
+    font-weight: 700;
+}
+
+.search-div{
+    width: 100%;
+    height:46px;
+    vertical-align: middle;
+}
+
+.search-div img{
+    width:137px;
+    height:46px;
+    float: left;
+    margin-right: 20px;
+}
+
+.div-input{
+    position: relative;
+}
+
+.s_ipt_wr{
+    display: inline-block;
+    width: 453px;
+    height: 32px;
+    border: 1px solid #b8b8b8;
+    border-right: 0;
+    vertical-align: top;
+    margin-top:15px;
+    position: relative;
+}
+.search-inpt{
+    width: 416px;
+    height: 25px;
+    font: 16px/22px arial;
+    margin: 2px 0 0 7px;
+    outline: 0;
+    border:0;
+    background: #fff;
+}
+
+.s_btn_wr {
+    display: inline-block;
+    z-index: 0;
+    width: 98px;
+    height: 32px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    margin-left: -4px;
+}
+
+.btn-submit{
+    width: 98px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    font-family: 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    padding: 1px 0 0;
+    background: url("../images/search_btn_0dd8940.png") 0px 0px no-repeat;
+    border: 0;
+}
+
+.photo{
+    position: absolute;
+    width: 22px;
+    height:17px;
+    top: 7px;
+    right: 5px;
+}
+
+.photo img {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 16px;
+    border:0;
+}
+.about-search{
+    width: 100%;
+    margin-top: 5px;
+    height:50px;
+    line-height: 50px;
+}
+
+.title{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 26px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #666;
+    background: url(../images/lazy_img_d398a71.png) no-repeat -191px -334px;
+}
+
+.about-search a{
+    margin-right: 20px;
+}
+
+.about-search a:hover{
+    text-decoration: underline;
+}
+/*图片*/
+.images-wrapper{
+    width: 100%;
+    min-height:300px;
+
+}
+
+.images-wrapper .center-wrapper{
+    position: relative;
+    min-height: 200px;
+}
+
+
+.box{
+    border:1px solid #ccc;
+    border-radius: 3px;
+    margin:10px;
+    float: left;
+    width: 300px;
+    background: #fff;
+    padding: 15px;
+    min-height: 100px;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    -moz-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    -webkit-transition: top 1s ease, left 1s ease;
+}
+
+.box img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.backTop{
+    cursor: pointer;
+    position: fixed;
+    text-decoration: none;
+    right:5%;
+    bottom: 20px;
+    width: 37px;
+    height: 38px;
+    display: none;
+    background: url(../images/result-huge-bg_2c8c18f.png) no-repeat 1px 0;
+}
+.backTop:hover{
+    background-position: -37px 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 计算器 -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">计算器（输入两个数进行加减乘除运算）</div>
+            <div class="panel-body">
+                <div class="input-group">
+                  <input type="number" class="form-control" placeholder="第一个数" id='num1'/>
+                </div>
+                <!--运算符-->
+                <select id="oper" class="form-control operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <!-- 数字2 -->
+                <div class="input-group">
+                  <input type="number" class="form-control" placeholder="第二个数" id='num2'/>
+                </div>
+                <!--等于-->
+                <button type="button" class="btn btn-success" onclick="operation()">=</button>
+                <!--结果-->
+                <div class="input-group result">
+                    <input type="text"  class="form-control"  id='result'/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

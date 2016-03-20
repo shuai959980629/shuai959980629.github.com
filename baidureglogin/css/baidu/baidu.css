@@ -1,0 +1,846 @@
+body{
+    text-align: center;
+}
+.container{
+    display: block;
+    height: 100%;
+    position: relative;
+    min-height:500px;
+    min-width:810px;
+}
+/*头部导航*/
+.header{
+    position: relative;
+    height:auto;
+}
+.nav {
+    z-index: 2;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    width: 490px;
+}
+
+.nav .mnav:hover,.nav .list-set a.set:hover,.nav a.login:hover{
+    color:#00c;
+}
+
+.nav a{
+    color: #666;
+    text-decoration: none;
+}
+
+.nav a.mnav{
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.nav a.login{
+    display: inline-block;
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+/*设置*/
+.nav .list-set{
+    position: absolute;
+    width:46px;
+    height:24px;
+    right:90px;
+}
+.nav .list-set .icon-triangle{
+    display: block;
+    top:-11px;
+    left:30px;
+    width:0;
+    height:0;
+    position:absolute;
+    border:5px solid transparent;
+    _border:0;
+    border-bottom-color: #d8d8d8;
+}
+.nav .list-set .icon-triangle:after{
+    content: '';
+    display: block;
+    top: -4px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 5px solid transparent;
+    border-bottom-color: #fff;
+}
+
+.nav .list-set a.set{
+    color: #333;
+    line-height: 24px;
+    font-size: 13px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: underline;
+}
+
+.list-set .ul-set{
+    display:none;
+    z-index: 99;
+    position: absolute;
+    right: -15px;
+    width: 75px;
+    top: 25px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+}
+
+.list-set .ul-set li a{
+    display:inline-block;
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.nav .list-set .ul-set li a:hover{
+    color:white;
+    background:#38f;
+}
+
+
+/*更多产品*/
+.nav a.more{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+}
+
+/*更多产品*/
+.more-product{
+    position: absolute;
+    display:none;
+    top:0;
+    right:0;
+    min-height: 600px;
+    *min-height:820px;
+    height:100%;
+    width:91px;
+    z-index:999;
+    overflow:auto;
+    border-left: 1px solid #e7e7e7;
+    background-color: #F9F9F9;
+}
+
+
+.more-product .list-div,.more-product .list-div li{
+    display: block;
+}
+.more-product .list-div li{
+    position: relative;
+}
+
+.ul-product-a{
+    display: block;
+    width: 66px;
+    height: 90px;
+    margin: 0 auto;
+    line-height: 30px;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.anymore{
+    cursor: default;
+    height: 50px;
+    width: 50px;
+    line-height:60px;
+    border: 0;
+    color: #333;
+    border-bottom: #f0f0f0 1px solid;
+}
+
+
+.bgimgspan{
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin-left:15px;
+    *margin-left:5px;
+    margin-top:20px;
+    background: url(../../images/bdbri_icons_2e35e84b.png) no-repeat;
+    cursor: pointer;
+}
+
+.bdbriimgitem_2{
+    background-position: -36px 0;
+}
+.bdbriimgitem_3{
+    width: 40px;
+    margin-left:12px;
+    *margin-left:4px;
+    background-position: -72px 0;
+}
+
+.bdbriimgitem_4{
+    background-position: -112px 0;
+}
+.bdbriimgitem_5{
+    background-position: -148px 0;
+}
+.bdbriimgitem_6{
+    background-position: -184px 0;
+}
+.bdbriimgitem_7{
+    background-position: -220px 0;
+}
+.ul-product-a:hover{
+    color:#666;
+    text-decoration:underline;
+}
+
+.anymore:hover{
+    text-decoration: none;
+    color: #333;
+}
+
+.more-a{
+    border:0;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+/*中间部分*/
+.content{
+    position: relative;
+    text-align: center;
+    width:100%;
+    top: 38.2%;
+    height:auto;
+}
+.search-div{
+    position: relative;
+    top:-191px;
+}
+
+.div-input{
+    margin:25px auto;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    width:710px;
+}
+.float-left{
+    float:left;
+}
+/*提交按钮*/
+.btn-submit{
+    cursor: pointer;
+    width: 100px;
+    height: 36px;
+    *height:37px;
+    *margin-top:1px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border:0;
+}
+.btn-submit:hover{
+    background:#317ef3;
+    border: 1px solid #2868c8;
+    box-shadow:1px 1px 1px #ccc ;
+}
+.search-inpt{
+    width:539px;
+    height:34px;
+    *height:35px;
+    padding: 0;
+    line-height:34px;
+    *line-height:35px;
+    border:1px solid #B8B8B8;
+    border-right-width: 0;
+    outline:none;
+    font-size:14px;
+    text-indent: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.search-inpt:focus{
+    border:1px solid #4791ff;
+    border-right-width: 0;
+}
+
+/*尾部*/
+.footer{
+    position:absolute;
+    bottom:80px;
+    *position:relative;
+    *top:55%;
+    width:100%;
+    height:60px;
+}
+.footer-div{
+    width:680px;
+    margin: 0 auto;
+}
+.gry-footer{
+    color:#999;
+}
+.div-qrcode{
+    float:left;
+    width:80px;
+    height:60px;
+    text-align:left;
+}
+.div-img-qrcode{
+    float:left;
+    width:60px;
+    height:60px;
+}
+.div-qrcode p,.div-baidu-about p{
+    margin:10px 0 0 15px;
+    font-size:12px;
+}
+.div-qrcode p b{
+    color:#4c4c4c;
+}
+.div-baidu-about{
+    float:left;
+    width:400px;
+}
+.div-baidu-about p a{
+    color:#272727;
+}
+.icon-icrlogo{
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../../images/icons_d99e5dac.png) no-repeat;
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+.p-footer{
+    color:#666;
+    margin-top:5px;
+}
+.cp-span{
+    font-size:18px;
+    margin-right:3px;
+    vertical-align: middle;
+}
+.footer-link{
+    color:#666;
+}
+
+.footer-top{
+    width: 50%;
+    margin: 0 auto;
+}
+.footer-about{
+    width: 66%;
+    margin:0 auto;
+}
+/*弹层*/
+.pop-wrapper{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 60000;
+    background-color: rgba(0, 0, 0,0.15);
+}
+/*登陆框*/
+.login-pop{
+    width: 390px;
+    height:450px;
+    background:#FFFFFF;
+    border-radius: 3px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    overflow: hidden;
+    margin-left: -195px;
+    margin-top: -225px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.pop-title{
+    width:100%;
+    height:50px;
+    line-height:50px;
+    float:left;
+    cursor: move;
+    background-color: #f7f7f7;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.pop-title .title-text{
+    display:block;
+    float: left;
+    font-size: 16px;
+    font-family: "宋体";
+    font-weight: bold;
+    color: #666;
+    padding-left:50px;
+    background: url(../../images/baidu_logo_24_056405eb.png) 18px 8px no-repeat;
+}
+.pop-title .close-btn{
+    display: block;
+    float: right;
+    width:16px;
+    height: 16px;
+    margin:15px 20px;;
+    cursor: pointer;
+    background-image: url(../../images/pass_login_icons_7241098f.png);
+    background-position: -56px -48px;
+}
+
+.pop-title .close-btn:hover{
+    background-position: -72px -48px;
+}
+/*用户名密码登录*/
+.normal-login{
+    height:325px;
+    width:100%;
+    float: left;
+    border-bottom: 1px solid #EEEEEE;
+}
+.login-list{
+    display: block;
+    height:100%;
+    width:350px;
+    margin: 0 20px;
+}
+
+
+.login-list li{
+    display: block;
+    width: 100%;
+    height:40px;
+    border:1px solid #DDDDDD;
+    margin-top:15px;
+    float:left;
+    position: relative;
+}
+/*错误提示*/
+.login-list .error-tip{
+    height:18px;
+    margin-top:10px;
+    line-height:18px;
+    font-size: 12px;
+    text-align: left;
+    color: #fc4343;
+    border:0;
+}
+
+
+.normal-login-list .login-sms-item{
+    height:20px;
+    margin-top:5px;
+    border:0;
+}
+
+.normal-login-list li .pass-sms-btn{
+    display: block;
+    float: right;
+    height:20px;
+    line-height:25px;
+    background: url('../../images/smsSwitchPhone_296e835b.png') 0 5px no-repeat;
+    padding-left: 15px;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: Arial, Helvetica, STHeiti,"宋体"
+}
+.normal-login-list li .pass-sms-btn:hover{
+    color:#1b66c7;
+    text-decoration:underline;
+}
+
+.pass-label{
+    display: block;
+    float: left;
+    margin: 10px;
+    width:0;
+    height: 24px;
+    z-index: 20;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background-image: url(../../images/input_icons_24_915272c4.png);
+    background-repeat: no-repeat;
+}
+/*输入框*/
+.pass-text-input {
+    float: left;
+    width: 304px;
+    height:100%;
+    border: 0;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    font-size: 14px;
+    color: #666;
+}
+
+/*用户名*/
+.username-label{
+    background-position: 0 -70px;
+}
+/*密码*/
+.password-label{
+    background-position: 0 -150px;
+}
+/*清空输入内容*/
+.clean-btn{
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    height: 16px;
+    width: 16px;
+    display:none;
+    cursor: pointer;
+    background: url(../../images/pass_login_icons_7241098f.png) no-repeat -88px -48px;
+}
+
+.clean-btn:hover{
+    background: url(../../images/pass_login_icons_7241098f.png) no-repeat -104px -48px;
+}
+
+/*自动登录*/
+.login-list .login-auto-item {
+    height:20px;
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+    text-align: left;
+    border: 0;
+}
+.auto-login{
+    position: relative;
+    top:1px;
+}
+
+.login-list .login-auto-item a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #1b66c7;
+    display: block;
+    float: right;
+    font-family: Arial, Helvetica, STHeiti,"宋体";
+}
+.login-list .login-auto-item a:hover{
+    text-decoration: underline;
+    color: #2e7fdb;
+}
+/*登录按钮*/
+.login-list .login-sbmit-item{
+    border: 0;
+    height: 48px;
+}
+
+.pass-button {
+    display: block;
+    height: 48px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background: #3f89ec;
+    border-radius: 3px;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+}
+.pass-button:hover {
+    background-color: #4490f7;
+}
+/*立即注册*/
+.normal-login-list .reg-link-item{
+    text-align: right;
+    height:20px;
+    border: 0;
+    margin-top: 10px;
+}
+.normal-login-list .reg-link-item a{
+    font-size: 12px;
+    color: #1b66c7;
+    font-family: Arial, Helvetica, STHeiti,"宋体";
+}
+.normal-login-list .reg-link-item a:hover{
+    text-decoration: underline;
+    color: #2e7fdb;
+}
+
+/*其他登录方式*/
+.other-login{
+    float: left;
+    width: 100%;
+    height:75px;
+}
+
+.othermethod{
+    padding-left:20px;
+    padding-top:15px;
+    text-align: left;
+    color: #666;
+    font-size: 12px
+}
+.other-login-action{
+    width: 100%;
+    height:38px;
+}
+.phoenix-btn-item:focus{
+    outline: none;
+}
+.phoenix-btn-item {
+    display: block;
+    float: left;
+    color: #00C;
+    cursor: pointer;
+    background-image: url('../../images/pass_login_icons_7241098f.png');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 24px;
+    margin-left: 20px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.qq{
+    background-position: -89px 0;
+}
+
+.sina{
+    background-position: -64px 0;
+}
+
+/*短信登陆*/
+.sms-login{
+    height:325px;
+    width:100%;
+    float: left;
+    display: none;
+}
+
+.sms-login .pass-sms-title {
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-top:5px;
+    height:18px;
+    border: 0;
+}
+.sms-login .pass-sms-tip{
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+    height:40px;
+    line-height:40px;
+    margin: 0;
+    border: 0;
+}
+
+
+/*手机号*/
+.phone-label{
+    background-position: 0 0;
+}
+
+.sms-login .sms-login-smsVerifyCode{
+    border: 0;
+}
+
+.sms-login .sms-login-smsVerifyCode .smsVerifyCode{
+    border:1px solid #DDDDDD;
+    width:200px;
+    text-indent: 10px;
+}
+.sms-login .sms-login-smsVerifyCode .clean-btn{
+    right:160px;
+}
+
+.sms-login .sms-login-smsVerifyCode .pass-item-timer {
+    color: #666;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    font-size: 14px;
+    height: 42px;
+    width: 135px;
+    margin-left: 13px;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.sms-login .sms-login-smsVerifyCode .pass-item-timer:hover {
+    background-color: #eee;
+    border-color: #dadada;
+}
+.sms-login .sms-login-smsVerifyCode .pass-item-timer:focus{
+    /*border:1px solid #A6C4F5;*/
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.sms-login .sms-accept-item{
+    height:20px;
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+    text-align: left;
+    border: 0;
+}
+.sms-login .sms-accept-item span{
+    display: block;
+    float: left;
+}
+
+.sms-login .sms-accept-item a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #1b66c7;
+    display: block;
+    float: right;
+    font-family: Arial, Helvetica, STHeiti,"宋体";
+}
+.sms-login .sms-accept-item a:hover{
+    text-decoration: underline;
+    color: #2e7fdb;
+}
+/*二维码登录*/
+.qrcode-login{
+    height:325px;
+    width:100%;
+    float: left;
+    display: none;
+}
+
+.pass-qrcode-title {
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    margin-bottom: 15px;
+    padding-top: 40px;
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.pass-qrcode-imgWrapper {
+    margin: 0 auto;
+    width: 136px;
+}
+.pass-qrcode-info{
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    background: #f1f1f1;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 2px;
+    -webkit-border-radius: 3px;
+    margin: 20px 0 0 0;
+}
+
+
+.pass-qrcode-info a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #1b66c7;
+    font-family: Arial, Helvetica, STHeiti,"宋体";
+}
+.pass-qrcode-info a:hover{
+    text-decoration: underline;
+    color: #2e7fdb;
+}
+
+.login-list .active{
+    border: 1px solid #2e7fdb;
+}
+.login-list .sms-login-smsVerifyCode .active{
+    border: 1px solid #2e7fdb;
+}
+
+.login-list .error{
+    border: 1px solid #FC4343;
+    background: #FAFFBD;
+}
+.login-list .sms-login-smsVerifyCode .error{
+    border: 1px solid #FC4343;
+    background: #FAFFBD;
+}
+
+.login-list .login-item-username .active-label{
+    background-position: 0 -110px;
+}
+
+.login-list .login-item-password .active-label{
+    background-position: 0 -190px;
+}
+
+.login-list .login-phone-item .active-label{
+    background-position: 0 -40px;
+}
+
+
+/*切换登陆方式*/
+.change-login-method{
+    display:block;
+    float: right;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background: url(../../images/pass_login_icons_7241098f.png) no-repeat 0 0;
+    z-index: 21;
+}
+
+.pop-qrcodeLogin {
+    background-position: -44px -86px;
+}
+
+.pop-normalLogin {
+    background-position: 0 -86px;
+}
+
+
+
+
+
+
+
+

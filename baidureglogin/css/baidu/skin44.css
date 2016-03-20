@@ -1,0 +1,61 @@
+/**/
+.container-skin-bg{
+    background:url('../../images/44.jpg') center 0  no-repeat;
+    background-size: cover;
+}
+/*头部*/
+.header-skin-bg{
+    color:#FFFFFF;
+    background: rgba(170,158,152,0.7);
+    border-bottom: 1px solid #AA9E98;
+}
+.header-skin-bg a{
+    color:#FFFFFF;
+}
+/*LOGO*/
+.logo-wrapper-skin{
+    height:150px;
+    width: 100%;
+    background:url('../../images/logo_white_fe6da1ec.png') center  no-repeat;
+    background-size: 300px;
+}
+/*搜索btn*/
+.box-search-wrapper .search-inpt{
+    padding: 10px 9px 10px 7px;
+    border: 0;
+    background-image: none;
+    height: 20px;
+    line-height: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.box-search-wrapper .search-inpt:focus{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+
+.box-search-wrapper .btn-submit{
+    background-image: url('../../images/skin_dark_aab96bcc.png');
+    background-position: -206px 0;
+    width: 104px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    margin-left: -1px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.box-search-wrapper .btn-submit:hover {
+    border-bottom: none;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    height: 40px;
+}

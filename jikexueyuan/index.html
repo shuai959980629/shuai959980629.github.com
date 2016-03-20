@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="keywords" content="极客学院IT在线教育平台" />
+	<meta name="description" content="极客学院IT在线教育平台" />
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="Jhou shuai">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="css/jike/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jike/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jike/zindex.css"/>
+    <title>极客学院IT在线教育平台</title>
+</head>
+<body>
+	<!--主容器-->
+	<div id="wrapper" class="wrapper">
+		<!--页头-->
+		<div class="header clearfix">
+			<!--顶部-->
+			<div class="wrap width_1000">
+				<!--LOGO-->
+				<a class="header-logo"  href="javascript:void(0);"><img class="logo" src="images/jike/logo_c8caff4.png" alt="极客学院"></a>
+				<!--广告-->
+				<a class="header-ad" href="javascript:void(0);"><img class="ad" src="images/jike/0f000ZjaVA2gvAIBirPKXs.gif" alt="极客学院"></a>
+				<!--搜索-->
+				<div class="search-section">
+					<form id="search-form" class="search-form" method="get" action="">
+						<input type="text" placeholder="搜索课程、问答或Wiki" class="search-text" id="search-text" autocomplete="off" name="keyword" />
+						<input type="submit" class="search-btn" id="search-btn" value="" />
+					</form>
+					<div id="hot-words" class="hot-words">
+						<a href="javascript:void(0);">Android</a>
+						<a href="javascript:void(0);">iOS</a>
+						<a href="javascript:void(0);">HTML5</a>
+					</div>
+				</div>
+				<!--登陆-->
+				<div class="loginbox">
+					<!--消息-->
+					<span class="my-massage2" id="messagebox"><i class="unread-num">(25)</i>
+						<div id="this-news" class="this-news">
+							<img src="images/jike/topicon_670cde9.gif" class="topic">
+							<h3>消息通知</h3>
+							<div class="nonews">
+								<img src="images/jike/nonews_4b56381.gif">
+							</div>
+							<ul class="news-list" style="display: none;"></ul>
+							<div class="all-news"><a href="javascript:void(0);">查看全部</a></div>
+						</div>
+					</span>
+					<em>|</em>
+					<span><a href="javascript:void(0);" class="my-course">我的课程</a></span>
+					<em>|</em>
+					<a href="javascript:void(0);" target="_blank" class="vip-icon">
+						<img class="header-vip" src="images/jike/vip-year_3ecca1f.png" alt="vip">
+					</a>
+					<!--用户,菜单-->
+					<div id="userMenu" class="userMenu"><a href="javascript:void(0);">一树梨花压海棠<i id="userMenuArrow" class="arrow"></i></a>
+						<div id="userMenu-menu" class="userMenu-menu"><i class="arrow"></i>
+							<ul id="userMenu-list">
+								<li><a class="mypage" href="javascript:void(0);" >个人主页</a></li>
+								<li><a class="mycenter" href="javascript:void(0);" >个人中心</a></li>
+								<li><a class="mycourse" href="javascript:void(0);" >我的课程</a></li>
+								<li><a class="myclass" href="javascript:void(0);">我的就业班</a></li>
+								<li><a class="freevip" href="javascript:void(0);" >免费VIP</a></li>
+								<li><a class="mycode" href="javascript:void(0);" >我的F码</a></li>
+								<li><a class="setting" href="javascript:void(0);" >账号设置</a></li>
+								<li><a class="connet" href="javascript:void(0);" >一键绑定</a></li>
+								<li><a class="logout" href="javascript:void(0);" >退出</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--loading 加载线条-->
+			<div id="loading" class="loading">
+				<div class="loading-length"></div>
+			</div>
+			<!--导航-->
+			<div class="navbox" id="navbox">
+				<div id="nav-wrapper" class="nav width_1000">
+					<!--导航条-->
+					<div id="nav-content" class="nav-content">
+						<a class="home" href="javascript:void(0);">首页</a>
+						<a data-index="0" class="nav-title-item job-course nav-title-0" href="javascript:void(0);">职业课程</a>
+						<a data-index="1" class="nav-title-item work-study nav-title-1" href="javascript:void(0);">就业学习</a>
+						<a data-index="2" class="nav-title-item jike-zone nav-title-2" href="javascript:void(0);">极客社区</a>
+						<a data-index="3" class="nav-title-item jike-plus nav-title-3" href="javascript:void(0);">极客＋</a>
+						<!--导航菜单-->
+						<ul id="navpanel" class="navpanel width_1000 clearfix">
+							<li class="panel-item panel-item-0" data-index="0">
+								<span class="angle"></span>
+								<ul class="item-box">
+									<li><a  href="javascript:void(0);">课程库</a></li>
+									<li><a  href="javascript:void(0);">知识体系图</a></li>
+									<li><a  href="javascript:void(0);">职业路径图</a></li>
+									<li><a  href="javascript:void(0);">系列课程</a></li>
+								</ul>
+							</li>
+							<li class="panel-item panel-item-1" data-index="1">
+								<span class="angle"></span>
+								<ul class="item-box">
+									<li><a  href="javascript:void(0);">Web前端开发</a></li>
+									<li><a  href="javascript:void(0);">Android开发</a></li>
+									<li><a  href="javascript:void(0);">JavaWeb开发</a></li>
+									<li><a  href="javascript:void(0);">iOS开发</a></li>
+								</ul>
+							</li>
+							<li class="panel-item panel-item-2" data-index="2">
+								<span class="angle"></span>
+								<ul class="item-box">
+									<li><a  href="javascript:void(0);">Wiki</a></li>
+									<li><a  href="javascript:void(0);">技术问答</a></li>
+									<li><a  href="javascript:void(0);">社群</a></li>
+									<li><a  href="javascript:void(0);">资源分享</a></li>
+								</ul>
+							</li>
+							<li class="panel-item panel-item-3" data-index="3">
+								<span class="angle"></span>
+								<ul class="item-box">
+									<li><a  href="javascript:void(0);">高校合作</a></li>
+									<li><a  href="javascript:void(0);">极客人才联盟</a></li>
+									<li><a  href="javascript:void(0);">布道师招募</a></li>
+									<li><a  href="javascript:void(0);">实战教练招募</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!--会员。课程。VIP-->
+					<div class="user-box">
+						<a class="viper" href="javascript:void(0);">
+							<span>
+								<img alt="VIP会员" src="images/jike/vip-icon_76ae754.png"/>
+								VIP会员
+							</span>
+						</a>
+						<a class="need-cuorse" href="javascript:void(0);">
+							<span>
+								<img alt="求课程" src="images/jike/star-icon_c593bc1.png"/>
+								求课程
+							</span>
+						</a>
+						<a class="appdownload" href="javascript:void(0);">
+							<span>
+								<img class="appicon" src="images/jike/dl-icon_4bc18a7.png"/>
+								<img class="newicon" src="images/jike/newicon_56b11ef.png"/>
+								APP下载
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--身体-->
+		<div class="body margin_top20 clearfix">
+			<!--课程分类，焦点图。-->
+			<div class="lesson-box width_1000">
+				<!--课程分类-->
+				<div class="lesson-classfiy-nav">
+					<ul>
+						<li class="lesson-devlop mobile-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="1" data-type="mobile" href="javascript:void(0);">移动开发</a></div>
+							<div class="lesson-list-show mobile-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">移动开发</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop web-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="2" data-type="web" href="javascript:void(0);">前端开发</a></div>
+							<div class="lesson-list-show web-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">前端开发</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop dev-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="3" data-type="dev" href="javascript:void(0);">后端开发</a></div>
+							<div class="lesson-list-show dev-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">后端开发</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop base-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="4" data-type="base" href="javascript:void(0);">基础知识</a></div>
+							<div class="lesson-list-show base-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">基础知识</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop clouddata-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="5" data-type="clouddata" href="javascript:void(0);">云计算&大数据</a></div>
+							<div class="lesson-list-show clouddata-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">云计算&大数据</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop intellegence-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="6" data-type="intellegence" href="javascript:void(0);">智能硬件&物联网</a></div>
+							<div class="lesson-list-show intellegence-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">智能硬件&物联网</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop db-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="7" data-type="db" href="javascript:void(0);">数据库</a></div>
+							<div class="lesson-list-show db-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">数据库</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop certificate-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="8" data-type="certificate" href="javascript:void(0);">认证考试</a></div>
+							<div class="lesson-list-show certificate-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">认证考试</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop enterpriseit-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="9" data-type="enterpriseit" href="javascript:void(0);">企业 IT</a></div>
+							<div class="lesson-list-show enterpriseit-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">企业 IT</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="lesson-devlop productdesign-devlop">
+							<div class="lesson-item-classfiy-nav"><a data-id="10" data-type="productdesign" href="javascript:void(0);">设计&产品&测试</a></div>
+							<div class="lesson-list-show productdesign-devlop-list">
+								<dl>
+									<dt><a href="javascript:void(0);">设计&产品&测试</a></dt>
+									<dd>
+										<a href="javascript:void(0);">HTML5</a>
+										<a href="javascript:void(0);">CSS3</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--焦点图 BANNER-->
+				<div class="lesson-center-focus">
+					<!--主焦点图banner-->
+					<div class="index-banner">
+						<div class="swiper-container banner-box swiper-banner">
+							<span id="banner-left" class="banner-left arrow-left"></span>
+							<span id="banner-right" class="banner-right arrow-right"></span>
+							<!--banner容器-->
+							<ul class="swiper-wrapper">
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56a6e34aeb2d8.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ea23f418a3c.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ebcf3f18b9c.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ebba4b792f0.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ebba2f19c01.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ea151de3e1a.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ebba3c26a62.jpg" /></a></li>
+								<li><a href="javascript:void(0);" target="_blank"><img title="" src="images/jike/56ebba5b34955.jpg" /></a></li>
+							</ul>
+							<!--切换-->
+							<ul class="tab-line swiper-Switch"></ul>
+						</div>
+					</div>
+					<!--副BANNER，左右切换-->
+					<div class="focuswork-wrap swiper-container">
+						<a href="javascript:void(0);" id="work-left"  class="work-left arrow arrow-left"></a>
+						<a href="javascript:void(0);" id="work-right" class="work-right arrow arrow-right"></a>
+						<ul class="lesson-list swiper-wrapper">
+							<li>
+								<a class="lession-item" href="javascript:void(0);">
+									<img class="lession-icon" title="" alt="" src="images/jike/569ce5c7bedf1.png"/>
+									<p class="lession-title">iOS开发工程师</p>
+									<p class="intro">基于最新Swift语言</p>
+								</a>
+							</li>
+							<li>
+								<a class="lession-item" href="javascript:void(0);">
+									<img class="lession-icon" title="" alt="" src="images/jike/android.png"/>
+									<p class="lession-title">Android开发工程师</p>
+									<p class="intro">挑战月薪2万的工作机会</p>
+								</a>
+							</li>
+							<li>
+								<a class="lession-item" href="javascript:void(0);">
+									<img class="lession-icon" title="" alt="" src="images/jike/html.png"/>
+									<p class="lession-title">HTML5/Web前端工程师</p>
+									<p class="intro">前腾讯高级前端工程师授课</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--新闻。用户信息，课程 wiki-->
+				<div class="lesson-right-show">
+					<!--快讯-->
+					<div class="news">
+						<h3>快讯</h3>
+						<ul class="list">
+							<li class="item"><a href="javascript:void(0);" target="_blank"  class="news-item-title red">前端图书免费领,绝不能错过!</a></li>
+							<li class="item"><a href="javascript:void(0);" target="_blank" class="news-item-title">炼就20w年薪web前端工程师</a></li>
+							<li class="item"><a href="javascript:void(0);" target="_blank" class="news-item-title red">极客学院全站课程免费啦！</a></li>
+							<li class="item"><a href="javascript:void(0);" target="_blank" class="news-item-title">大数据职业路径图 重磅上线</a></li>
+						</ul>
+					</div>
+					<!--用户信息-->
+					<div class="userinfo">
+						<div class="head-box">
+							<a href="javascript:void(0);"><img class="user-photo" width="40" src="images/jike/3lfaur54q0sgs.jpeg" title="一树梨花压海棠" alt="一树梨花压海棠" /></a>
+						</div>
+						<div class="name-wrap">
+							<div class="hello-word">
+								<span class="word">Hi! <a href="javascript:void(0);">一树梨花压海棠</a></span>
+								<a href="javascript:void(0);" target="_blank" class="vip-icon">
+									<img class="vip" src="images/jike/vip-year_3ecca1f.png" alt="vip" />
+								</a>
+							</div>
+							<div class="option">
+								<a class="mycourse-record" href="javascript:void(0);">学习记录</a>
+								<a class="answer" href="javascript:void(0);" >我的回答</a>
+								<a class="user-setting" href="javascript:void(0);">设置</a>
+							</div>
+							<div class="operate">
+								<a href="javascript:void(0);" class="vip">免费VIP</a>
+							</div>
+						</div>
+					</div>
+					<!--课程-->
+					<div class="recommend">
+						<!--课程-->
+						<ul  id="start-list" class="start-list">
+							<li class="lesson-list-question recommend-move-event" data-type="question">
+								<span class="question icon"></span>
+								<span class="title">问答</span>
+								<span class="angle-bottom"></span>
+							</li>
+							<li class="lesson-list-wiki recommend-move-event"  data-type="wiki">
+								<span class="wiki icon"></span>
+								<span class="title">wiki</span>
+								<span class="angle-bottom"></span>
+							</li>
+							<li class="lesson-list-lesson recommend-move-event" data-type="lesson">
+								<span class="lession icon"></span>
+								<span class="title">课程</span>
+								<span class="angle-bottom"></span>
+							</li>
+							<li class="lesson-list-group recommend-move-event" data-type="group">
+								<span class="group icon"></span>
+								<span class="title">社群</span>
+								<span class="angle-bottom"></span>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span class="download icon"></span>
+									<span class="title">下载</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span class="known icon"></span>
+									<span class="title">知识</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span class="occupation icon"></span>
+									<span class="title">职业</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<span class="vip icon"></span>
+									<span class="title">VIP</span>
+								</a>
+							</li>
+						</ul>
+						<!--展开内容-->
+						<div id="move-list" class="move-list">
+							<ul class="type-list">
+								<li data-type="question" id="type-question" class="type-list-item">问答</li>
+								<li data-type="wiki" id="type-wiki" class="type-list-item">wiki</li>
+								<li data-type="lesson" id="type-lesson" class="type-list-item">课程</li>
+								<li data-type="group" id="type-group" class="type-list-item group">社群</li>
+							</ul>
+							<div class="content">
+								<!--问答-->
+								<ul  class="question tab-content">
+									<li><a href="javascript:void(0);"><img width="16" src="images/jike/54578ddd8e62a.png"/><span class="title">【问答技巧】怎样提问才能让我的问题更快速被解答？</span></a></li>
+									<li><a href="javascript:void(0);"><img width="16" src="images/jike/54eeb7cba8791.png"/><span class="title">Bootstrap 最新版 V4 中文文档</span></a></li>
+								</ul>
+								<!--wiki-->
+								<ul class="wiki cf tab-content">
+									<li><a href="javascript:void(0);"><img src="images/jike/6cf980d73a694bbfad9e0bced1a9d045.jpg" class="picture"><p class="title">Django 搭建博客</p></a></li>
+									<li><a href="javascript:void(0);"><img src="images/jike/6cf980d73a694bbfad9e0bced1a9d045.jpg" class="picture"><p class="title">Django 搭建博客</p></a></li>
+								</ul>
+
+								<!--课程-->
+								<ul class="lesson cf tab-content">
+									<li><a href="javascript:void(0);"><img src="images/jike/html.png" class="picture"><p class="title">HTML5开发</p></a></li>
+									<li><a href="javascript:void(0);"><img src="images/jike/android.png" class="picture"><p class="title">Android</p></a></li>
+									<li><a href="javascript:void(0);"><img src="images/jike/Java.png" class="picture"><p class="title">Java语言</p></a></li>
+									<li><a href="javascript:void(0);"><img src="images/jike/55028a07c02d1.jpg" class="picture"><p class="title">JavaWeb</p></a></li>
+								</ul>
+
+								<!--社群-->
+								<ul class="group tab-content">
+									<li>
+										<img src="images/jike/c58bb41944592a9e1bf334472e5c078d.png" alt="" class="picture">
+										<div class="info">
+											<p class="title">Android工程师</p>
+											<p class="count">已有<span>669</span>人加入</p>
+										</div>
+										<a href="javascript:void(0);" class="join" target="_blank">＋ 加入</a>
+									</li>
+									<li>
+										<img src="images/jike/b6b490c2efa84f1ea9ee435323118560.png" alt="" class="picture">
+										<div class="info">
+											<p class="title">Web大前端工程师</p>
+											<p class="count">已有<span>791</span>人加入</p>
+										</div>
+										<a href="javascript:void(0);" class="join">＋ 加入</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--直播，公开课-->
+			<div id="livelesson" class="livelesson  width_1000">
+				<div class="liveimg">
+					<a href="javascript:void(0);" target="_blank" class="live-leader-img">
+						<img src="images/jike/live_0269111.png">
+					</a>
+				</div>
+				<div class="livebox">
+					<ul class="livebox-week">
+						<li data-index="1" class="livebox-week-day weekactive">2月29日「周一」</li>
+						<li data-index="2" class="livebox-week-day">3月01日「周二」</li>
+						<li data-index="3" class="livebox-week-day">3月02日「周三」</li>
+						<li data-index="3" class="livebox-week-day">3月03日「周四」</li>
+						<li data-index="5" class="livebox-week-day">3月04日「周五」</li>
+					</ul>
+					<div class="livebox-lesson">
+						<div class="livebox-lesson-list lessonshow">
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4>
+											<span class="course-title">SpriteKit 游戏开发之图形图像操作</span>
+											<img src="images/jike/free_5ba8856.png" width="50" />
+										</h4>
+										<p><i class="icon icon-teacher"></i>主讲：陈绍佳<i class="icon icon-clock"></i><span class="start-time">上午 10:00</span>-<span class="end-time">上午 11:00</span></p>
+										<p>带你掌握快速开发iOS游戏的酷炫技能！</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf57bb8e2.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4><span class="course-title">Android面试那些事儿</span><img src="images/jike/free_5ba8856.png" width="50"></h4>
+										<p><i class="icon icon-teacher"></i>主讲：董策<i class="icon icon-clock"></i><span class="start-time">下午 03:00</span>-<span class="end-time">下午 04:00</span></p>
+										<p>又到了跳槽高发季，选择好自己心仪的工作是每位同学的梦想。我们应该掌握如何以正确的姿势...</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf66bfe56.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+						</div>
+						<div class="livebox-lesson-list">
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4>
+											<span class="course-title">前端中的SEO优化</span>
+											<img src="images/jike/free_5ba8856.png" width="50" />
+										</h4>
+										<p><i class="icon icon-teacher"></i>主讲：陈绍佳<i class="icon icon-clock"></i><span class="start-time">上午 10:00</span>-<span class="end-time">上午 11:00</span></p>
+										<p>前端中的SEO优化,极速体验！</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf57bb8e2.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4><span class="course-title">Android面试那些事儿</span><img src="images/jike/free_5ba8856.png" width="50"></h4>
+										<p><i class="icon icon-teacher"></i>主讲：董策<i class="icon icon-clock"></i><span class="start-time">下午 03:00</span>-<span class="end-time">下午 04:00</span></p>
+										<p>又到了跳槽高发季，选择好自己心仪的工作是每位同学的梦想。我们应该掌握如何以正确的姿势...</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf66bfe56.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+						</div>
+						<div class="livebox-lesson-list">
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4>
+											<span class="course-title">iOS动画编程</span>
+											<img src="images/jike/free_5ba8856.png" width="50" />
+										</h4>
+										<p><i class="icon icon-teacher"></i>主讲：陈绍佳<i class="icon icon-clock"></i><span class="start-time">上午 10:00</span>-<span class="end-time">上午 11:00</span></p>
+										<p>讲解和演示iOS开发必备的动画编程技术！</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf57bb8e2.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+						</div>
+						<div class="livebox-lesson-list">
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4>
+											<span class="course-title">大数据实时计算哪家强之Storm</span>
+											<img src="images/jike/free_5ba8856.png" width="50" />
+										</h4>
+										<p><i class="icon icon-teacher"></i>主讲：陈绍佳<i class="icon icon-clock"></i><span class="start-time">上午 10:00</span>-<span class="end-time">上午 11:00</span></p>
+										<p>实时计算框架Storm介绍，对比其他处理框架的优势，适合使用Storm开发大数据实时处理应！</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf57bb8e2.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+						</div>
+						<div class="livebox-lesson-list">
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4>
+											<span class="course-title">网站性能提升利器  ——  PHP之memcache扩展</span>
+											<img src="images/jike/free_5ba8856.png" width="50" />
+										</h4>
+										<p><i class="icon icon-teacher"></i>主讲：陈绍佳<i class="icon icon-clock"></i><span class="start-time">上午 10:00</span>-<span class="end-time">上午 11:00</span></p>
+										<p>网站性能提升利器  ——  PHP之memcache扩展！</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf57bb8e2.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+							<div class="lesson-item">
+								<div class="lesson-item-content">
+									<div class="inner">
+										<h4><span class="course-title">求职敲门砖——IT职业简历炼成术</span><img src="images/jike/free_5ba8856.png" width="50"></h4>
+										<p><i class="icon icon-teacher"></i>主讲：董策<i class="icon icon-clock"></i><span class="start-time">下午 03:00</span>-<span class="end-time">下午 04:00</span></p>
+										<p>求职敲门砖——IT职业简历炼成术...</p>
+									</div>
+								</div>
+								<div class="lesson-item-left">
+									<img src="images/jike/569cbf66bfe56.png" alt="">
+								</div>
+								<div class="lesson-item-right">
+									<p>限额<span>300</span>人</p>
+									<a href="javascript:void(0);" class="livebtn bggreen">预定名额</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--热门，最新。免费，项目实战，首发，企业合作 导航-->
+			<div class="nav-lesson width_1000 margin_top20">
+				<ul class="nav-lesson-list">
+					<li class="hot nav-lesson-list-item on">热门推荐</li>
+					<li class="new nav-lesson-list-item">最新课程</li>
+					<li class="free nav-lesson-list-item">免费课程</li>
+					<li class="project nav-lesson-list-item">项目实战</li>
+					<li class="premiere nav-lesson-list-item">全球首发</li>
+					<li class="cooperation nav-lesson-list-item">企业合作</li>
+				</ul>
+			</div>
+			<!--热门，最新。免费，项目实战，首发，企业合作 列表-->
+			<div class="lesson-list-box width_1000 margin_top20 ">
+				<!--z-index 无效是为什么？-->
+				<div class="lesson-list-div lesson-list-div-active">
+					<ul class="clearfix">
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56ce6b9992976.jpg" class="lessonimg" title="Windows 10 应用开发之数据绑定（上）" alt="Windows 10 应用开发之数据绑定（上）">
+									<div  class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 "><a href="javascript:void(0);">Laravel 开发环境搭建（上）</a></h2>
+								<p class="lesson-info-description">
+									在应用程序开发过程，应用程序界面与逻辑数据的交互是必不可少的，而且也是很常用的。本课程将从列表控件（如 ListView、ListBox 等）说起，然后过渡到数据绑定相关的知识。本课程会向学员讲述以下重要的技术点： 列表控件基础、Binding 对象的使用、数据转换器的实现。
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper" >
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="lesson-list-div">
+					<ul class="clearfix">
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang lesson-shoucangshow"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56ce6b9992976.jpg" class="lessonimg" title="Windows 10 应用开发之数据绑定（上）" alt="Windows 10 应用开发之数据绑定（上）">
+									<div  class="lessonplay lessonplayshow"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 "><a href="javascript:void(0);">Windows 10 应用开发之数据绑定（上）</a></h2>
+								<p class="lesson-info-description lesson-info-descriptionshow">
+									在应用程序开发过程，应用程序界面与逻辑数据的交互是必不可少的，而且也是很常用的。本课程将从列表控件（如 ListView、ListBox 等）说起，然后过渡到数据绑定相关的知识。本课程会向学员讲述以下重要的技术点： 列表控件基础、Binding 对象的使用、数据转换器的实现。
+								</p>
+								<div class="timeandicon ">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji zhongjishow">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number learn-numbershow">3434人学习</em>
+									</div>
+									<div class="lessonicon-box lessonicon-boxshow">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper" >
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="lesson-list-div">
+					<ul class="clearfix">
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang lesson-shoucangshow"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56ce6b9992976.jpg" class="lessonimg" title="Windows 10 应用开发之数据绑定（上）" alt="Windows 10 应用开发之数据绑定（上）">
+									<div  class="lessonplay lessonplayshow"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 "><a href="javascript:void(0);">Windows 10 应用开发之数据绑定（上）</a></h2>
+								<p class="lesson-info-description lesson-info-descriptionshow">
+									在应用程序开发过程，应用程序界面与逻辑数据的交互是必不可少的，而且也是很常用的。本课程将从列表控件（如 ListView、ListBox 等）说起，然后过渡到数据绑定相关的知识。本课程会向学员讲述以下重要的技术点： 列表控件基础、Binding 对象的使用、数据转换器的实现。
+								</p>
+								<div class="timeandicon ">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji zhongjishow">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number learn-numbershow">3434人学习</em>
+									</div>
+									<div class="lessonicon-box lessonicon-boxshow">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper" >
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="lesson-list-div">
+					<ul class="clearfix">
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang lesson-shoucangshow"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56ce6b9992976.jpg" class="lessonimg" title="Windows 10 应用开发之数据绑定（上）" alt="Windows 10 应用开发之数据绑定（上）">
+									<div  class="lessonplay lessonplayshow"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 "><a href="javascript:void(0);">Windows 10 应用开发之数据绑定（上）</a></h2>
+								<p class="lesson-info-description lesson-info-descriptionshow">
+									在应用程序开发过程，应用程序界面与逻辑数据的交互是必不可少的，而且也是很常用的。本课程将从列表控件（如 ListView、ListBox 等）说起，然后过渡到数据绑定相关的知识。本课程会向学员讲述以下重要的技术点： 列表控件基础、Binding 对象的使用、数据转换器的实现。
+								</p>
+								<div class="timeandicon ">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji zhongjishow">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number learn-numbershow">3434人学习</em>
+									</div>
+									<div class="lessonicon-box lessonicon-boxshow">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper" >
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="lesson-list-div">
+					<ul class="clearfix">
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang lesson-shoucangshow"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56ce6b9992976.jpg" class="lessonimg" title="Windows 10 应用开发之数据绑定（上）" alt="Windows 10 应用开发之数据绑定（上）">
+									<div  class="lessonplay lessonplayshow"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 "><a href="javascript:void(0);">Windows 10 应用开发之数据绑定（上）</a></h2>
+								<p class="lesson-info-description lesson-info-descriptionshow">
+									在应用程序开发过程，应用程序界面与逻辑数据的交互是必不可少的，而且也是很常用的。本课程将从列表控件（如 ListView、ListBox 等）说起，然后过渡到数据绑定相关的知识。本课程会向学员讲述以下重要的技术点： 列表控件基础、Binding 对象的使用、数据转换器的实现。
+								</p>
+								<div class="timeandicon ">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji zhongjishow">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number learn-numbershow">3434人学习</em>
+									</div>
+									<div class="lessonicon-box lessonicon-boxshow">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper" >
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="lesson-list-div">
+					<ul class="clearfix">
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang lesson-shoucangshow"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56ce6b9992976.jpg" class="lessonimg" title="Windows 10 应用开发之数据绑定（上）" alt="Windows 10 应用开发之数据绑定（上）">
+									<div  class="lessonplay lessonplayshow"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 "><a href="javascript:void(0);">Windows 10 应用开发之数据绑定（上）</a></h2>
+								<p class="lesson-info-description lesson-info-descriptionshow">
+									在应用程序开发过程，应用程序界面与逻辑数据的交互是必不可少的，而且也是很常用的。本课程将从列表控件（如 ListView、ListBox 等）说起，然后过渡到数据绑定相关的知识。本课程会向学员讲述以下重要的技术点： 列表控件基础、Binding 对象的使用、数据转换器的实现。
+								</p>
+								<div class="timeandicon ">
+									<div class="timelevel">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji zhongjishow">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number learn-numbershow">3434人学习</em>
+									</div>
+									<div class="lessonicon-box lessonicon-boxshow">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper" >
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="lesson-list-wrapper">
+							<div class="lessonimg-box">
+								<i class="user-action lesson-shoucang"></i>
+								<a href="javascript:void(0);">
+									<img src="images/jike/56cbb9866f8c2.jpg" class="lessonimg" title="Android Studio全方位指南之基本操作指南" alt="Android Studio全方位指南之基本操作指南">
+									<div class="lessonplay"><i class="playericon"></i></div>
+								</a>
+							</div>
+							<div class="lesson-infor clearfix">
+								<h2 class="lesson-info-h2 clearfix"><a href="javascript:void(0);">Android Studio全方位指南之基本操作指南</a></h2>
+								<p class="lesson-info-description">
+									本课程主要介绍Android Studio的一些基本操作。包括新建项目，导入导出不同类型项目，基本的调试技巧等
+								</p>
+								<div class="timeandicon clearfix">
+									<div class="timelevel clearfix">
+										<dl>
+											<dd class="mar-b8"><i class="time-icon"></i><em>6课时46分钟</em></dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon"></i><em>初级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">3434人学习</em>
+									</div>
+									<div class="lessonicon-box clearfix">
+										<a href="javascript:void(0);">
+											<img width="16" src="images/jike/54578d8e652c3.png" alt="android" title="Android" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--职业路径图-->
+			<div class="learnbox width_1000 margin_top20">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">职业路径图</a></strong>
+					<i class="way">?</i>
+					<span class="way-infor"><i></i>更系统的职业技能学习路径</span>
+					<a href="javascript:void(0);" class="more-lesson">更多&gt;&gt;</a>
+				</div>
+				<!--学习卡-->
+				<div class="learn-card clearfix">
+					<a href="javascript:void(0);">
+						<img src="images/jike/5615cd7d3e99f.png" alt="WEB大前端工程师" width="100%" height="120">
+						<h2>WEB大前端工程师</h2>
+						<p>月薪15k-30k</p>
+						<p>Web开发的未来趋势</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/560905e64a9d1.png" alt="Android工程师" width="100%" height="120">
+						<h2>Android工程师</h2>
+						<p>月薪5k-30k</p>
+						<p>最火爆的职业 人才缺口大</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/56160c8b90692.png" alt="iOS开发工程师" width="100%" height="120">
+						<h2>iOS开发工程师</h2>
+						<p>月薪6k-30k</p>
+						<p>企业必争的人才资源</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/56160c8b90692.png" alt="iOS开发工程师" width="100%" height="120">
+						<h2>iOS开发工程师</h2>
+						<p>月薪6k-30k</p>
+						<p>企业必争的人才资源</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/5616279756548.png" alt="JavaWeb工程师" width="100%" height="120">
+						<h2>JavaWeb工程师</h2>
+						<p>月薪6k-35k</p>
+						<p>就业面最广的职业方向</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/5615cd7d3e99f.png" alt="WEB大前端工程师" width="100%" height="120">
+						<h2>WEB大前端工程师</h2>
+						<p>月薪15k-30k</p>
+						<p>Web开发的未来趋势</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/560905e64a9d1.png" alt="Android工程师" width="100%" height="120">
+						<h2>Android工程师</h2>
+						<p>月薪5k-30k</p>
+						<p>最火爆的职业 人才缺口大</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/56160c8b90692.png" alt="iOS开发工程师" width="100%" height="120">
+						<h2>iOS开发工程师</h2>
+						<p>月薪6k-30k</p>
+						<p>企业必争的人才资源</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/56160c8b90692.png" alt="iOS开发工程师" width="100%" height="120">
+						<h2>iOS开发工程师</h2>
+						<p>月薪6k-30k</p>
+						<p>企业必争的人才资源</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+					<a href="javascript:void(0);">
+						<img src="images/jike/5616279756548.png" alt="JavaWeb工程师" width="100%" height="120">
+						<h2>JavaWeb工程师</h2>
+						<p>月薪6k-35k</p>
+						<p>就业面最广的职业方向</p>
+						<button class="greenbtn2">立即学习</button>
+					</a>
+				</div>
+			</div>
+			<!--知识体系图-->
+			<div class="knowledge-systems width_1000 margin_top40">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">知识体系图</a></strong>
+					<i class="way">?</i>
+					<span class="way-infor"><i></i>更快速找到你需要的课程</span>
+					<a href="javascript:void(0);" class="more-lesson">更多&gt;&gt;</a>
+				</div>
+				<!--体系图-->
+				<div class="mapbox clearfix">
+					<div class="map-extr">
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/android.png" alt="Android" width="52"/>
+									<h2>Android</h2>
+									<span>90门课程</span>
+								</div>
+								<div class="back"><strong>850294人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/html.png" alt="Android" width="52"/>
+									<h2>HTML5开发</h2>
+									<span>116门课程</span>
+								</div>
+								<div class="back"><strong>2008128人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/Java.png" alt="Java语言" width="52">
+									<h2>Java语言</h2>
+									<span>45门课程</span>
+								</div>
+								<div class="back"><strong>753213人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/php.png" alt="PHP语言" width="52">
+									<h2>PHP语言</h2>
+									<span>23门课程</span>
+								</div>
+								<div class="back"><strong>298999人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/55028a07c02d1.jpg" alt="JavaWeb" width="52">
+									<h2>JavaWeb</h2>
+									<span>64门课程</span>
+								</div>
+								<div class="back"><strong>719746人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/ios.png" alt="iOS开发" width="52">
+									<h2>iOS开发</h2>
+									<span>51门课程</span>
+								</div>
+								<div class="back"><strong>443198人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/android.png" alt="Android" width="52"/>
+									<h2>Android</h2>
+									<span>90门课程</span>
+								</div>
+								<div class="back"><strong>850294人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/html.png" alt="Android" width="52"/>
+									<h2>HTML5开发</h2>
+									<span>116门课程</span>
+								</div>
+								<div class="back"><strong>2008128人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/Java.png" alt="Java语言" width="52">
+									<h2>Java语言</h2>
+									<span>45门课程</span>
+								</div>
+								<div class="back"><strong>753213人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/php.png" alt="PHP语言" width="52">
+									<h2>PHP语言</h2>
+									<span>23门课程</span>
+								</div>
+								<div class="back"><strong>298999人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/55028a07c02d1.jpg" alt="JavaWeb" width="52">
+									<h2>JavaWeb</h2>
+									<span>64门课程</span>
+								</div>
+								<div class="back"><strong>719746人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/ios.png" alt="iOS开发" width="52">
+									<h2>iOS开发</h2>
+									<span>51门课程</span>
+								</div>
+								<div class="back"><strong>443198人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/android.png" alt="Android" width="52"/>
+									<h2>Android</h2>
+									<span>90门课程</span>
+								</div>
+								<div class="back"><strong>850294人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/html.png" alt="Android" width="52"/>
+									<h2>HTML5开发</h2>
+									<span>116门课程</span>
+								</div>
+								<div class="back"><strong>2008128人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/Java.png" alt="Java语言" width="52">
+									<h2>Java语言</h2>
+									<span>45门课程</span>
+								</div>
+								<div class="back"><strong>753213人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/php.png" alt="PHP语言" width="52">
+									<h2>PHP语言</h2>
+									<span>23门课程</span>
+								</div>
+								<div class="back"><strong>298999人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/55028a07c02d1.jpg" alt="JavaWeb" width="52">
+									<h2>JavaWeb</h2>
+									<span>64门课程</span>
+								</div>
+								<div class="back"><strong>719746人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/ios.png" alt="iOS开发" width="52">
+									<h2>iOS开发</h2>
+									<span>51门课程</span>
+								</div>
+								<div class="back"><strong>443198人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/android.png" alt="Android" width="52"/>
+									<h2>Android</h2>
+									<span>90门课程</span>
+								</div>
+								<div class="back"><strong>850294人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/html.png" alt="Android" width="52"/>
+									<h2>HTML5开发</h2>
+									<span>116门课程</span>
+								</div>
+								<div class="back"><strong>2008128人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/Java.png" alt="Java语言" width="52">
+									<h2>Java语言</h2>
+									<span>45门课程</span>
+								</div>
+								<div class="back"><strong>753213人已学习</strong>
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/php.png" alt="PHP语言" width="52">
+									<h2>PHP语言</h2>
+									<span>23门课程</span>
+								</div>
+								<div class="back"><strong>298999人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/55028a07c02d1.jpg" alt="JavaWeb" width="52">
+									<h2>JavaWeb</h2>
+									<span>64门课程</span>
+								</div>
+								<div class="back"><strong>719746人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+						<div class="card-transform">
+							<a href="javascript:void(0);" class="flipper">
+								<div class="front">
+									<img src="images/jike/ios.png" alt="iOS开发" width="52">
+									<h2>iOS开发</h2>
+									<span>51门课程</span>
+								</div>
+								<div class="back"><strong>443198人已学习</strong><!--<span></span>-->
+									<button class="greenbtn">立即学习</button>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--精品系列课程-->
+			<div class="excellent width_1000 margin_top40">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">精品系列课程</a></strong>
+					<i class="way">?</i>
+					<span class="way-infor"><i></i>更相关的课程，更有序的学习</span>
+					<a href="javascript:void(0);" class="more-lesson">更多&gt;&gt;</a>
+				</div>
+				<!--精品课程-->
+				<div class="fine-series margin_top20 clearfix">
+					<div class="fine-lesson-card">
+						<h2>Java 设计模式</h2>
+						<div class="images">
+							<img src="images/jike/261410253583.jpg">
+						</div>
+						<div class="other">
+							<span class="lesson-count">24门</span>
+							<span class="learn-count">72960人学习</span>
+							<div class="collect">
+								<span class="btn yellowbtn" collect_type="1" course_id="6">已收藏</span>
+								<span class="btn btn-cancel" collect_type="1" course_id="6">取消收藏</span>
+							</div>
+						</div>
+						<div class="describe">
+							<div class="picture">
+								<a href="javascript:void(0);" target="_blank">
+									<img src="images/jike/avatar_96865.jpg" alt="hexter">
+								</a>
+							</div>
+							<div class="name"><a href="javascript:void(0);">hexter</a></div>
+							<div class="text"><a href="javascript:void(0);" target="_blank">按照一个模式一个课程的方式讲解23种设计模式。每个模式讲3-4节课，从模拟项目设计引入设计模式设计方案，并有详细示例代码和效果演示。</a></div>
+							<a href="javascript:void(0);" seriesid="6" target="_blank" class="btn  greenbtn">马上学习</a>
+						</div>
+					</div>
+					<div class="fine-lesson-card">
+						<h2>Java 设计模式</h2>
+						<div class="images">
+							<img src="images/jike/261410253583.jpg">
+						</div>
+						<div class="other">
+							<span class="lesson-count">24门</span>
+							<span class="learn-count">72960人学习</span>
+							<div class="collect">
+								<span class="btn greenbtn" collect_type="0" course_id="6">收藏</span>
+							</div>
+						</div>
+						<div class="describe">
+							<div class="picture">
+								<a href="javascript:void(0);" target="_blank">
+									<img src="images/jike/3lfaur54q0sgs.jpeg" alt="hexter">
+								</a>
+							</div>
+							<div class="name"><a href="javascript:void(0);">Jhou shuai</a></div>
+							<div class="text"><a href="javascript:void(0);" target="_blank">按照一个模式一个课程的方式讲解23种设计模式。每个模式讲3-4节课，从模拟项目设计引入设计模式设计方案，并有详细示例代码和效果演示。</a></div>
+							<a href="javascript:void(0);" seriesid="6" target="_blank" class="btn  greenbtn">马上学习</a>
+						</div>
+					</div>
+					<div class="fine-lesson-card">
+						<h2>Java 设计模式</h2>
+						<div class="images">
+							<img src="images/jike/261410253583.jpg">
+						</div>
+						<div class="other">
+							<span class="lesson-count">24门</span>
+							<span class="learn-count">72960人学习</span>
+							<div class="collect">
+								<span class="btn greenbtn" collect_type="0" course_id="6">收藏</span>
+							</div>
+						</div>
+						<div class="describe">
+							<div class="picture">
+								<a href="javascript:void(0);" target="_blank">
+									<img src="images/jike/avatar_96865.jpg" alt="hexter">
+								</a>
+							</div>
+							<div class="name"><a href="javascript:void(0);">hexter</a></div>
+							<div class="text"><a href="javascript:void(0);" target="_blank">按照一个模式一个课程的方式讲解23种设计模式。每个模式讲3-4节课，从模拟项目设计引入设计模式设计方案，并有详细示例代码和效果演示。</a></div>
+							<a href="javascript:void(0);" seriesid="6" target="_blank" class="btn  greenbtn">马上学习</a>
+						</div>
+					</div>
+					<div class="fine-lesson-card">
+						<h2>Java 设计模式</h2>
+						<div class="images">
+							<img src="images/jike/261410253583.jpg">
+						</div>
+						<div class="other">
+							<span class="lesson-count">24门</span>
+							<span class="learn-count">72960人学习</span>
+							<div class="collect">
+								<span class="btn greenbtn" collect_type="0" course_id="6">收藏</span>
+							</div>
+						</div>
+						<div class="describe">
+							<div class="picture">
+								<a href="javascript:void(0);" target="_blank">
+									<img src="images/jike/avatar_96865.jpg" alt="hexter">
+								</a>
+							</div>
+							<div class="name"><a href="javascript:void(0);">hexter</a></div>
+							<div class="text"><a href="javascript:void(0);" target="_blank">按照一个模式一个课程的方式讲解23种设计模式。每个模式讲3-4节课，从模拟项目设计引入设计模式设计方案，并有详细示例代码和效果演示。</a></div>
+							<a href="javascript:void(0);" seriesid="6" target="_blank" class="btn  greenbtn">马上学习</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--wiki-->
+			<div class="wiki-wrapper width_1000 margin_top40">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">Wiki</a></strong>
+					<i class="way">?</i>
+					<span class="way-infor"><i></i>IT技术图文教程库 程序员的藏经阁</span>
+					<a href="javascript:void(0);" class="more-lesson">更多&gt;&gt;</a>
+				</div>
+				<!--wiki-->
+				<div class="wikibox margin_top20 clearfix">
+					<div class="one-wiki">
+						<h2>推荐</h2>
+						<div class="wiki-img margin-top10">
+							<dl>
+								<dd>
+									<a href="javascript:void(0);">
+										<div class="imgbox">
+											<i class="look"></i>
+											<img src="images/jike/6cf980d73a694bbfad9e0bced1a9d045.jpg" class="cover">
+										</div>
+										<h3>Django 搭建博客</h3>
+										<span>70页/13章</span>
+									</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0);">
+										<div class="imgbox">
+											<i class="look"></i>
+											<img src="images/jike/82d392493bba44c4ab1199f03d2e23df.jpg" class="cover">
+										</div>
+										<h3>Lua 教程</h3>
+										<span>96页/25章</span>
+									</a>
+								</dd>
+							</dl>
+							<ul>
+								<li><a href="javascript:void(0);"><span class="wiki-title">·iOS人机交互指南</span><span class="wiki-pages">294页/48章</span></a></li>
+								<li><a href="javascript:void(0);"><span class="wiki-title">· Struts 2 教程</span><span class="wiki-pages">154页/31章</span></a></li>
+								<li><a href="javascript:void(0);"><span class="wiki-title">· PHP 新手指南</span><span class="wiki-pages">137页/32章</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="one-wiki">
+						<h2>最新</h2>
+						<div class="wiki-img margin-top10">
+							<dl>
+								<dd>
+									<a href="javascript:void(0);">
+										<div class="imgbox">
+											<i class="look"></i>
+											<img src="images/jike/7eed202733fb4300af9d7934e616f264.jpg" class="cover">
+										</div>
+										<h3>Django 搭建博客</h3>
+										<span>70页/13章</span>
+									</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0);">
+										<div class="imgbox">
+											<i class="look"></i>
+											<img src="images/jike/dacf17869f2e494eafc59057379acaa9.jpg" class="cover">
+										</div>
+										<h3>Lua 教程</h3>
+										<span>96页/25章</span>
+									</a>
+								</dd>
+							</dl>
+							<ul>
+								<li><a href="javascript:void(0);"><span class="wiki-title">·iOS人机交互指南</span><span class="wiki-pages">294页/48章</span></a></li>
+								<li><a href="javascript:void(0);"><span class="wiki-title">· Struts 2 教程</span><span class="wiki-pages">154页/31章</span></a></li>
+								<li><a href="javascript:void(0);"><span class="wiki-title">· PHP 新手指南</span><span class="wiki-pages">137页/32章</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="one-wiki">
+						<h2>热门</h2>
+						<div class="wiki-img margin-top10">
+							<dl>
+								<dd>
+									<a href="javascript:void(0);">
+										<div class="imgbox">
+											<i class="look"></i>
+											<img src="images/jike/40ad2cd7b04c49b781263dd37cab62f6.jpg" class="cover">
+										</div>
+										<h3>Django 搭建博客</h3>
+										<span>70页/13章</span>
+									</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0);">
+										<div class="imgbox">
+											<i class="look"></i>
+											<img src="images/jike/d0cc39eaa8fc44dd8ba9f3fba467d38c.jpg" class="cover">
+										</div>
+										<h3>Lua 教程</h3>
+										<span>96页/25章</span>
+									</a>
+								</dd>
+							</dl>
+							<ul>
+								<li><a href="javascript:void(0);"><span class="wiki-title">·iOS人机交互指南</span><span class="wiki-pages">294页/48章</span></a></li>
+								<li><a href="javascript:void(0);"><span class="wiki-title">· Struts 2 教程</span><span class="wiki-pages">154页/31章</span></a></li>
+								<li><a href="javascript:void(0);"><span class="wiki-title">· PHP 新手指南</span><span class="wiki-pages">137页/32章</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--战略合作企业-->
+			<div class="enterprise width_1000 margin_top40">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">战略合作企业</a></strong>
+					<a href="javascript:void(0);" class="more-lesson">更多&gt;&gt;</a>
+				</div>
+				<!--合作企业-->
+				<div class="strategy width_1000">
+					<span id="banner-left3" class="banner-left3  arrow-left arrow-strategy"></span>
+					<span id="banner-right3" class="banner-right3 arrow-right arrow-strategy"></span>
+					<ul>
+						<li><a href="javascript:void(0);"><img src="images/jike/microsoft.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/tengxun.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/chukong.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/557f8ff48f7d3.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/54d1d9f50e1af.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/keda.jpg" alt="微软"></a></li>
+					</ul>
+				</div>
+			</div>
+			<!--合作院校-->
+			<div class="university width_1000 margin_top40">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">合作院校</a></strong>
+					<a href="javascript:void(0);" class="more-lesson">更多&gt;&gt;</a>
+				</div>
+				<!--合作院校-->
+				<div class="university-swipper width_1000">
+					<span  class="banner-left3  arrow-left arrow-strategy"></span>
+					<span  class="banner-right3 arrow-right arrow-strategy"></span>
+					<ul>
+						<li><a href="javascript:void(0);"><img src="images/jike/40669370a3f2ea7e3d21a6d182cf296c.png" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/1eb9dcb3193de807d21941b297483635.png" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/c9a111a4946bf39e77cd811c207740b9.png" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/496ab840e239a60c1bb4b1139268c54e.png" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/3ab8eb024ecd5a8dce2c5f83972781b3.png" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/b05d88a6f5306cf55905c8fcb2e49b89.png" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/8dda2bb223523163ca596c7f026de6ad.png" alt="微软"></a></li>
+					</ul>
+				</div>
+			</div>
+			<!--媒体报道-->
+			<div class="enterprise width_1000 margin_top40">
+				<div class="index-public-title clearfix">
+					<strong><a href="javascript:void(0);">媒体报道</a></strong>
+				</div>
+				<!--媒体报道-->
+				<div class="strategy width_1000">
+					<span  class="banner-left3  arrow-left arrow-strategy"></span>
+					<span  class="banner-right3 arrow-right arrow-strategy"></span>
+					<ul>
+						<li><a href="javascript:void(0);"><img src="images/jike/mt_1_42b5088.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/mt_2_28e84dd.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/mt_3_46bc154.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/mt_4_2376f75.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/mt_5_8427d73.jpg" alt="微软"></a></li>
+						<li><a href="javascript:void(0);"><img src="images/jike/mt_6_21a38b7.jpg" alt="微软"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div><!--正文结束-->
+		<!--页脚-->
+		<div class="footer">
+			<div class="footer-nav">
+				<div class="footer-nav-wrapper width_1000">
+					<ul>
+						<li class="jike">
+							<dl>
+								<dt class="nav-title"><a href="javascript:void(0);">极客学院</a></dt>
+								<dt>·<a href="javascript:void(0);">职业课程库</a></dt>
+								<dt>·<a href="javascript:void(0);">知识体系图</a></dt>
+								<dt>·<a href="javascript:void(0);">职业路径图</a></dt>
+								<dt>·<a href="javascript:void(0);">企业课程</a></dt>
+								<dt>·<a href="javascript:void(0);">资源下载</a></dt>
+								<dt>·<a href="javascript:void(0);">课程标签</a></dt>
+							</dl>
+						</li>
+						<li class="service">
+							<dl>
+								<dt class="nav-title"><a href="javascript:void(0);">网站服务</a></dt>
+								<dt>·<a href="javascript:void(0);">课程需求</a></dt>
+								<dt>·<a href="javascript:void(0);">免费体验VIP</a></dt>
+								<dt>·<a href="javascript:void(0);">黑板报</a></dt>
+								<dt>·<a href="javascript:void(0);">网站地图</a></dt>
+							</dl>
+						</li>
+						<li class="helper">
+							<dl>
+								<dt class="nav-title"><a href="javascript:void(0);">帮助中心</a></dt>
+								<dt>·<a href="javascript:void(0);">技术问答</a></dt>
+								<dt>·<a href="javascript:void(0);">VIP权益</a></dt>
+								<dt>·<a href="javascript:void(0);">常见问题</a></dt>
+								<dt>·<a href="javascript:void(0);">服务条款</a></dt>
+								<dt>·<a href="javascript:void(0);">版权声明</a></dt>
+								<dt>·<a href="javascript:void(0);">免责声明</a></dt>
+							</dl>
+						</li>
+						<li class="comunication">
+							<dl>
+								<dt class="nav-title"><a href="javascript:void(0);">交流合作</a></dt>
+								<dt>·<a href="javascript:void(0);">关于我们</a></dt>
+								<dt>·<a href="javascript:void(0);">联系我们</a></dt>
+								<dt>·<a href="javascript:void(0);">社会招聘</a></dt>
+								<dt>·<a href="javascript:void(0);">布道师招募</a></dt>
+								<dt>·<a href="javascript:void(0);">合作咨询</a></dt>
+								<dt>·<a href="javascript:void(0);">友情链接</a></dt>
+								<dt>·<a href="javascript:void(0);">实战教练招募</a></dt>
+							</dl>
+						</li>
+						<li class="contanct">
+							<div class="search-share">
+								<div class="codejike"><strong>极客学院，编程是一种信仰！</strong></div>
+								<div class="app">
+									<img src="images/jike/iphone_ecb3977.png" width="21">
+									<div>
+										<strong>手机客户端</strong>
+										<p>离线缓存 随时学习</p>
+									</div>
+								</div>
+								<div class="share">
+									<a class="sina" href="javascript:void(0);"></a>
+									<a class="tieba" href="javascript:void(0);"></a>
+									<a class="weixin" href="javascript:void(0);">
+										<img src="images/jike/weixin-pop_7fe7a08.png" class="weinxinpop">
+									</a>
+								</div>
+								<div class="kefu-online">
+									<div class="kefu-icon online"></div>
+									<div class="online-title">
+										<strong>联系我们</strong>
+										<p>工作日9:00-21:00在线</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom width_1000 copyright">
+				Copyright © 2013-2016 <strong><a href="http://www.jikexueyuan.com/" target="_blank">北京优亿致远无线技术有限公司</a></strong>&nbsp;<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong> All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802013056
+			</div>
+		</div>
+		<!--最右边的AD-->
+		<div class="ad-wrapper">
+			<div class="ad-1">
+				<i class="close"></i>
+				<img src="images/jike/0f00070V96t-awyIBWyhJ0.jpg" title="Javascript图书免费领" alt="Javascript图书免费领" border="0" height="200" width="105">
+			</div>
+			<div class="ad-2">
+				<i class="close"></i>
+				<img src="images/jike/0f0005yYI1Do_tYGfPudo0.jpg" title="极客学院课程免费啦" alt="极客学院课程免费啦" border="0" height="120" width="105">
+			</div>
+		</div>
+	</div>
+	<script src="js/sea.js" id="seajsnode" ></script>
+	<script src="js/config.js"></script>
+	<script>
+		// 加载入口模块
+		seajs.use("./js/main")
+	</script>
+</body>
+</html>

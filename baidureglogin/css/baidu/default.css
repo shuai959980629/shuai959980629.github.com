@@ -1,0 +1,9 @@
+/*头部*/
+.header-skin-bg{
+    color: #555;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EBEBEB;
+}
+.header-skin-bg a{
+    color: #555;
+}
