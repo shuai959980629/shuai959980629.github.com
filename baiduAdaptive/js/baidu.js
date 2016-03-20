@@ -1,0 +1,27 @@
+var baiDu = {
+    init:function(){
+        this.defaultFocus();
+        this.settingMenu();
+        this.baiduMoreMenu();
+    },
+    defaultFocus:function(){
+        $("#search-input").focus();
+    },
+    settingMenu:function(){
+        $("#list-set,#set,#ul-set").mouseover(function(){
+            $("#ul-set").show();
+        }).mouseout(function(){
+            $("#ul-set").hide();
+        });
+    },
+    baiduMoreMenu:function(){
+        $("#more,#more-product").mouseover(function(){
+            $("#more-product").show();
+        }).mouseout(function(){
+           $("#more-product").hide();
+        });
+    }
+};
+$(function(){
+   baiDu.init();
+});

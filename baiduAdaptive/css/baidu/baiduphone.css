@@ -1,0 +1,513 @@
+.container{
+    display: none;
+}
+.wrapper{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+/*头部*/
+header{
+    height:280px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-image: url("../../images/yuanxiao_skin6sp.jpg");
+    background-color: rgb(216, 68, 68);
+    position: relative;
+    width: 100%;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+/*顶部导航*/
+nav{
+    width: 100%;
+    height: 50px;
+    margin:5px auto ;
+}
+
+
+/*天气 用户。登陆**/
+.weather,.user-wrapper{
+    color: #fff;
+    width: 50%;
+    float: left;
+}
+/*天气*/
+.weather-outline{
+    width:200px;
+}
+.weather-outline div{
+    float: left;
+}
+.weather-outline .icon-tianqi,.weather-outline .weather-num{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.weather-outline .weather-status{
+    padding-left: 10px;
+    line-height: 15px;
+    text-align: left;
+}
+.weather-outline i{
+    display: block;
+    width: 0;
+    top:10px;
+    position: relative;
+}
+/*用户。登陆*/
+.login{
+    float: right;
+    width:50px;
+    text-align: center;
+}
+/*百度logo*/
+.logo{
+    width:100%;
+    height: 55px;
+    text-align: center;
+    padding: 17px 0 15px;
+}
+/*百度一下*/
+.baidu{
+    width:100%;
+    height:50px;
+}
+
+.baidu .baidu-form .div-input{
+    width:90%;
+    height:50px;
+    margin: 5px auto;
+    display: -webkit-box;
+}
+
+.baidu .baidu-form .div-input .search-inpt{
+    display: block;
+    margin: 0;
+    padding: 7px 5px 7px 6px;
+    height: 33px;
+    width: 100%;
+    line-height: 28px;
+    resize: none;
+    overflow: hidden;
+    border:0;
+    border-radius: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-box-flex: 1;
+}
+.btn-div{
+    width:150px;
+    height:47px;
+    background:#ffffff;
+    position: relative;
+}
+
+.btn-div .yuyin{
+    height: 47px;
+    width: 23px;
+    float: left;
+    background: url("../../images/callicon.png");
+    background-repeat: no-repeat;
+    background-position: 8px 12px;
+    background-size: 37px 20px;
+}
+.btn-div .btn-sbmt{
+    float: left;
+    width:120px;
+    height: 47px;
+    top:0;
+    right:0;
+    position: absolute;
+}
+
+.baidu .baidu-form .div-input .btn-submit {
+    width:100%;
+    height:45px;
+    background: #38f;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 42px;
+    letter-spacing: -1px;
+    border: 0;
+    font-size: 16px;
+    border-top: 1px solid #38f;
+    border-bottom: 1px solid #38f;
+    border-radius: 0;
+    box-sizing: inherit;
+}
+/*中间导航*/
+.nav-middle{
+    width:100%;
+    height:60px;
+}
+
+.product {
+    width:90%;
+    height:60px;
+    margin: 5px auto;
+    display: -webkit-box;
+}
+
+.product a{
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    -webkit-box-flex: 1;
+}
+.product a i{
+    display: block;
+    margin-bottom: 15px;
+    height: 24px;
+    font-size: 25px;
+}
+.product a .more{
+    position: relative;
+    top: 9px;
+    left: 9px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+/*主体内容*/
+.content{
+    width:100%;
+}
+.center{
+    width:90%;
+    height:100%;
+    margin: 0 auto;
+}
+.center .center-content{
+    width: 100%;
+    margin-top: 8px;
+    border-radius:5px ;
+    background:#FFFFFF;
+}
+.center .big{
+    height:130px;
+}
+
+.center .bigger{
+    height: 210px;
+}
+.center .biggest{
+    overflow: hidden;
+    height: 300px;
+}
+/*主体导航。title*/
+.center-nav{
+    width: 100%;
+    float: left;
+    height: 40px;
+    border-radius:5px ;
+}
+.title,.handle{
+    width: 50%;
+    height: 40px;
+    float: left;
+    text-align: left;
+    text-indent: 2em;
+    position: relative;
+}
+
+.title h2{
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #999;
+}
+
+.edit-icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top:0;
+    right: 20px;
+    font: 34px/34px iconfont;
+    color: #b6b7ba;
+}
+.change {
+    position: absolute;
+    top: 0;
+    right:40px;
+    width: 82px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    color: #262626;
+    font-size: 14px;
+    text-align: center;
+}
+.change:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 20px;
+    top: 10px;
+    right: -5px;
+    border-right: 1px solid #F0F0F0;
+}
+
+.change i{
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px
+}
+
+
+/*内容*/
+.center-middle-content{
+    width: 100%;
+    float: left;
+    border-radius:5px ;
+}
+
+.center-nav-list a{
+    color: #262626;
+    float: left;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 6px;
+    width: 25%;
+    height: 42px;
+    line-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hot-ul-list li{
+    display: inline-block;
+    width: 50%;
+    height: 42px;
+    line-height: 42px;
+    float: left;
+    vertical-align: top;
+}
+.hot-ul-list li a{
+    color: #262626;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.hot-ul-list li a:visited{
+    color:#777;
+}
+
+.hot-ul-list .hot-li{
+    position: relative;
+}
+
+.hot-ul-list .hot-li .hot:after{
+    position: absolute;
+    content: "\e618";
+    top: -8px;
+    right:40px;
+    font: 32px/1 iconfont;
+    color: #fb4343;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hotSearch {
+    width: 100%;
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    text-align: right;
+    border-top: 1px solid #f4f5f6;
+}
+.hotSearch a {
+    display: inline-block;
+    padding-right: 14px;
+    font-size: 14px;
+    color: #0058d2;
+}
+.hotSearch  a i{
+    position: relative;
+    top: 1px;
+}
+
+.newsContent-list li{
+    display: block;
+    width: 100%;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    border-bottom: 1px solid #f4f5f6;
+}
+
+.newsContent-list li a{
+    color: #262626;
+}
+.newsContent-list li a .newsTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width:79%;
+    float: left;
+    text-indent: 2em;
+    display: inline-block;
+}
+
+.newsContent-list li a .time {
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+    display: inline-block;
+    color: #999;
+}
+
+.newsContent-list li:first-child .imgBg {
+    width: 83px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    float: left;
+    left:22px;
+}
+.newsContent-list .hotnews{
+    height:60px;
+}
+.newsContent-list .outer .newsTitle {
+    left: 97px;
+    line-height: 28px;
+    position: absolute;
+    width: 60%;
+
+}
+.newsContent-list .outer  .time {
+    bottom: -5px;
+    left: 125px;
+    text-align: left;
+}
+
+/*生活服务*/
+.other{
+    height: 290px;
+}
+.lifeContrl{
+    width: 100%;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 4px;
+    font-size:19px;
+    color: #262626;
+    text-align: center;
+}
+.lifeContrl .open{
+    display: inline-block;
+}
+.lifeContrl .icon-xia{
+    display: inline-block;
+    position:relative;
+    top: 10px;
+    left: -10px;
+    font-size: 39px;
+}
+
+.location{
+    float: left;
+    position: relative;
+    margin: 8px 14px 14px;
+    width: 100%;
+    font-size: 16px;
+    height:30px;
+    text-align: left;
+    line-height:30px;
+}
+
+.location span{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:60%;
+}
+
+.location-handle{
+    position: absolute;
+    color: #262626;
+    top: 0;
+    right:20px;
+    width:80px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #d2d6dd;
+    border-radius: 2px;
+    text-indent: 20px;
+    font-size: 14px;
+}
+
+
+.location-handle .icon-dingwei2{
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    color: #919498;
+    font: 20px/20px icons;
+}
+.lbs-list{
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+.lbs-list li{
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.lbs-list li a{
+    color: #262626;
+}
+.lbs-list li a p{
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    margin: 3px 0 25px;
+}
+.lbs-list li a .iconfont{
+    width: 30px;
+    margin: 0 auto;
+    color: #919498;
+}
+
+
+footer{
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+/*皮肤*/
+.skin-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../images/yuanxiao_skin6sp.jpg");
+    background-color: rgb(216, 68, 68);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
