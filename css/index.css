@@ -477,3 +477,10 @@ canvas{
     color:#666;
     line-height:36px;
 }
+.product .title{
+    color:#ff0000;
+}
+.product .title:hover{
+    color:#ff0000;
+    text-decoration: underline;
+}
