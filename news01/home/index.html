@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0">
+	<title>百度新闻</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--主容器-->
+	<div class="container">
+		<!--头部-导航-->
+		<header>
+			<div class="ui-new-toolbar"></div>
+			<ul id="nav-wrapper" class="nav-wrapper">
+				<li data-id='0' class='nav-item'><span class="cur">全部</span></li>
+			</ul>
+		</header>
+		<!--正文：新闻-->
+		<article>
+			<ul id="newsWrapper" class="new-wrapper"></ul>
+			<div class="ui-refresh-wrapper">
+				<input type="hidden" value="1" id="page"/>
+				<div id="refresh"  class="ui-refresh">点击加载更多</div>
+			</div>
+		</article>
+	</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

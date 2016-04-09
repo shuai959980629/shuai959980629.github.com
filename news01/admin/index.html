@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Jhou shuai">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/admin.css" />
+    <title>业务管理系统-新闻管理</title>
+</head>
+
+<body>
+    <!--主容器-->
+    <div class="container">
+        <!--导航-->
+        <div class="nav nav-bigger">
+            <div class="nav-middle ">
+                <div class="nav-inner visible-lg-block">
+                    <p class="on"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>新闻管理</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></p>
+                </div>
+                <div id="nav-list-bigger-div" class="nav-inner visible-bigger-block nav-div-list">
+                    <p class="on"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>新闻管理</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></p>
+                    <p><a id="nav-list-bigger-icon" class="list-icon" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a></p>
+                    <ul id="nav-list-bigger" class="nav-list">
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></li>
+                    </ul>
+                </div>
+                <div id="nav-list-big-div" class="nav-inner visible-big-block nav-div-list">
+                    <p  class="on"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>新闻管理</font></a></p>
+                    <p><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></p>
+                    <p><a id="nav-list-big-icon" class="list-icon" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a></p>
+                    <ul id="nav-list-big" class="nav-list">
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></li>
+                    </ul>
+                </div>
+                <div id="nav-list-sm" class="nav-inner visible-sm-block nav-sm-list">
+                    <a class="a-nav-list on"  href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>新闻管理</font></a>
+                    <a id="on-list-nav" class="list-icon"  href="javascript:void(0);">
+                        <i class="glyphicon glyphicon-list"></i>
+                    </a>
+                    <ul id="nav-list" class="nav-list">
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                        <li><a class="a-nav-list" href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待处理</font></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-left">
+                <h1>业务管理系统 <small>&copy;Jhou shuai</small></h1>
+            </div>
+            <div class="nav-right">
+                <img src="./images/zhoushuai30.png" width="20" alt="Jhou shuai" title="Jhou shuai" class="img-circle">
+                <p class="font_size14 fcolor_gray font_bold user">Jhou Shuai(超级管理员)</p>
+                <p class="font_size14 fcolor_gray3">13356781234</p>
+                <a class="top-exit" href="javascript:void(0);"><i class="icon iconfont icon-guanbi1"></i>退出登录</a>
+            </div>
+        </div>
+        <div class="nav nav-big">
+            <div class="nav-big-left">
+                <h1>业务管理系统 <small>&copy;Jhou shuai</small></h1>
+            </div>
+            <div id="nav-big-right" class="nav-big-right">
+                <a id="nav-big-right-icon" class="list-icon" href="javascript:void(0);"><i class="glyphicon glyphicon-list"></i></a>
+                <ul id="handle-list" class="photo">
+                    <li class="user-li user">
+                        <img src="./images/zhoushuai30.png" width="20" alt="Jhou shuai" title="Jhou shuai" class="img-circle">
+                        <span class="font_size14 fcolor_gray font_bold user">Jhou Shuai(超级管理员)</span>
+                    </li>
+                    <li class="user-li"><span class="font_size14 fcolor_gray3">13356781234</span></li>
+                    <li class="user-li user-li-nav-list on-user-li"><a href="javascript:void(0);"><i class="icon iconfont icon-shezhi"></i><font>新闻管理</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-wo1"></i><font>员工列表</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-shequ"></i><font>用户列表</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-chanpincanshu"></i><font>所有日志</font></a></li>
+                    <li class="user-li user-li-nav-list"><a href="javascript:void(0);"><i class="icon iconfont icon-question"></i><font>待&nbsp;&nbsp;处&nbsp;&nbsp;理</font></a></li>
+                    <li class="user-li"><a class="top-exit" href="javascript:void(0);"><i class="icon iconfont icon-guanbi1"></i>退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--中间部分-->
+        <div class="middle">
+            <div class="center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="fcolor_red">[添加]</span>新闻分类
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="className">新闻分类名称：</label>
+                                <input type="text" name="className" class="form-control" id="className" placeholder="请输入类名">
+                            </div>
+                            <button type="button" onclick="addClass(event)" class="btn btn-primary">保存</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="fcolor_red">[列表]</span>新闻分类
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="fcolor_black font_size14">分类名称</th>
+                                    <th class="fcolor_green font_size14 time">添加时间</th>
+                                    <th class="fcolor_green font_size14 time">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="class-list-wrapper"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div id="add-edit-news" class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="fcolor_red">[添加]</span>新闻
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <select id="class-option" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="title">新闻标题</label>
+                                <input type="text" name="title" class="form-control" id="title" placeholder="新闻标题">
+                            </div>
+                            <div class="form-group">
+                                <label for="introduction">新闻简介</label>
+                                <textarea name="introduction" placeholder="新闻简介" class="form-control" id="introduction" rows="3"></textarea>
+                            </div>
+                            <input type="hidden" id="newsId" value=""/>
+                            <button type="button" onclick="addNews(event)" class="btn btn-primary">保存</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="fcolor_red">[列表]</span>新闻
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="fcolor_black font_size14">新闻标题</th>
+                                <th class="fcolor_black font_size14">新闻简介</th>
+                                <th class="fcolor_green font_size14 time">添加时间</th>
+                                <th class="fcolor_green font_size14 time">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="newslist-wrapper">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
