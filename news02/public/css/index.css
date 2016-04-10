@@ -1,0 +1,100 @@
+body ,html,ul,li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: arial;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+.container{
+    min-width:320px;
+    height:100%;
+}
+header{
+    width: 100%;
+    height:120px;
+    background: #3E98F0;
+}
+.ui-new-toolbar {
+    position: relative;
+    min-width: 320px;
+    height: 44px;
+    z-index: 2;
+    background-color: #3e98f0;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+}
+.ui-new-toolbar {
+    background-image: url(../images/bg-news-logo_344ce44.png);
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    background-size: 77px auto;
+    -webkit-background-size: 77px auto;
+}
+.nav-wrapper{
+    border-top:1px solid #FFFFFF;
+}
+
+.nav-wrapper li{
+    display: block;
+    float: left;
+    width: 16%;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+}
+
+.nav-wrapper li .cur{
+    border-bottom: 1px solid #fff;
+    padding-bottom:5px;
+}
+
+
+
+/*新闻*/
+.new-wrapper{
+    display: block;
+    margin: 20px auto;
+    width: 95%;
+}
+.new-wrapper li{
+    width: 100%;
+    color: #b8bac0;
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+    overflow: hidden;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+
+.new-wrapper li .title{
+    font-size: 16px;
+    line-height: 20px;
+    color: #262b31;
+}
+
+.new-wrapper li .descr{
+    font-size: 13px;
+    line-height: 20px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+
+
+.ui-refresh {
+    height: 36px;
+    line-height: 36px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border: 1px solid #ebedef;
+    border-radius: 1px;
+    color: #545454;
+    margin: 14px 40px;
+}

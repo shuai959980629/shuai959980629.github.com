@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import url("iconfont.css");
+body,
+input {
+    font-family: "Microsoft YaHei", "Heiti SC", simhei, "Lucida Sans Unicode", "Myriad Pro", "Hiragino Sans GB", Verdana !important;
+    background: #ececec;
+    outline: none;
+    font-size: 12px;
+}
+body{
+    background-color: #2D3A4B;
+}
+.btn_width{
+    width: 100% !important;
+}
+.nav{
+    margin-top: 30px;
+    color:#FFFFFF;
+}
+.login-box{
+    min-width: 200px;
+    border-radius: 10px;
+    padding: 15px;
+    margin:12% auto 0 auto;
+    background: #edf2f9;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width:550px){
+    .container .login-box{
+        transition: all 0.3s ease-in-out 1s;
+        -webkit-transition: all 0.3s ease-in-out 1s;
+        width:550px;
+        height:550px;
+    }
+}
+
+
+.login-box h2{
+    text-align: center;
+}
+.login-box .input-group{
+    margin-top:40px;
+}
+.login-box .input-group .form-control{
+    height: 50px;
+}
+
+.login-box .btn-group{
+    width:100%;
+    margin-top:70px;
+}
+.login-box form .btn{
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+.login-box .footer{
+    margin-top: 60px;
+    text-align: right;
+}
+
+.login-box .checkbox label{
+    padding: 0;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+

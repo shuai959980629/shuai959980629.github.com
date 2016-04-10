@@ -1,0 +1,25 @@
+{
+  "name": "news",
+  "description": "news",
+  "main": "bin/www",
+  "authors": [
+    "zhoushuai"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "news"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

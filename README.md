@@ -16,7 +16,10 @@
     <li><a target="_blank" href="baiduAdaptive/index.html">百度首页自适应版本</a></li>
     <li><a target="_blank" href="baidureglogin/index.html">百度注册登陆</a></li>
     <li><a target="_blank" href="jikexueyuan/index.html">开发极客学院首页</a></li>
+    <li><a target="_blank" class="title" href="javascript:void(0);">第三阶段：PHP、Mysql、NodeJS</a></li>
     <li><a target="_blank" href="news01/home/index.html">php版的百度新闻</a></li>
+    <li><a target="_blank" href="news02/home/index.html">NodeJs1.0版的百度新闻</a></li>
+    <li><a target="_blank" href="news03/home/index.html">NodeJs1.1版的百度新闻</a></li>
 </ul>
 
 

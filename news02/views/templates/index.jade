@@ -1,0 +1,26 @@
+extends ../layout
+block content
+	//- 主容器
+	div.container
+	//- 头部-导航
+	header
+		div.ui-new-toolbar
+		ul(id="nav-wrapper",class="nav-wrapper")
+			li(data-id=0,class='nav-item')
+				span(class='cur') 全部
+			each item in category
+				li(data-id="#{item.id}",class="nav-item")
+					span #{item.name}
+	//- 正文：新闻
+		<li > <p >W3C中国媒体发言人贾雪远..</p> <p >新浪财贾雪远
+		出席并演讲。</p> <span >03月26日</span></li>
+	article
+		ul(id="newsWrapper",class="new-wrapper")
+			each list in newslist
+				li(class="newslist-item",data-id="#{list.id}")
+					p(class="title") #{list.title}
+					p(class="descr") #{list.introduction}
+					p(class="time")  #{list.created}
+		div.ui-refresh-wrapper
+			input(type="hidden",value="1",id="page")
+			div#refresh.ui-refresh 点击加载更多
