@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://v3.bootcss.com/assets/css/docs.min.css">
+    <link rel="stylesheet" href="./css/first.css"/>
+    <title>高级前端工程师面试题</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="text-center"><h1>JavaScript</h1></nav>
+        <article>
+            <div class="bs-callout bs-callout-info">
+                <h4>1.介绍js的基本数据类型。</h4>
+                <pre>
+                    Undefined、Null、Boolean、Number、String
+                </pre>
+                <h4>2.介绍js有哪些内置对象？</h4>
+                <pre>
+                    Object 是 JavaScript 中所有对象的父对象
+
+                    数据封装类对象：Object、Array、Boolean、Number 和 String
+                    其他对象：Function、Arguments、Math、Date、RegExp、Error
+                </pre>
+                <h4>3.说几条写JavaScript的基本规范？</h4>
+                <pre>
+                    1.不要在同一行声明多个变量。
+                    2.请使用 ===/!==来比较true/false或者数值
+                    3.使用对象字面量替代new Array这种形式
+                    4.不要使用全局函数。
+                    5.Switch语句必须带有default分支
+                    6.函数不应该有时候有返回值，有时候没有返回值。
+                    7.For循环必须使用大括号
+                    8.If语句必须使用大括号
+                    9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
+                </pre>
+                <h4>4.JavaScript原型，原型链 ? 有什么特点？</h4>     
+                <pre>
+                    每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，
+                    如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，
+                    于是就这样一直找下去，也就是我们平时所说的原型链的概念。
+                    关系：instance.constructor.prototype = instance.__proto__
+
+                    特点：
+                    JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。
+
+
+                     当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话，
+                     就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。
+                        function Func(){}
+                        Func.prototype.name = "Sean";
+                        Func.prototype.getInfo = function() {
+                          return this.name;
+                        }
+                        var person = new Func();//现在可以参考var person = Object.create(oldObject);
+                        console.log(person.getInfo());//它拥有了Func的属性和方法
+                        //"Sean"
+                        console.log(Func.prototype);
+                        // Func { name="Sean", getInfo=function()}
+                </pre> 
+                <h4>5.JavaScript有几种类型的值？，你能画一下他们的内存图吗？</h4>  
+                <pre>
+                    栈：原始数据类型（Undefined，Null，Boolean，Number、String） 
+                    堆：引用数据类型（对象、数组和函数）
+
+                    两种类型的区别是：存储位置不同；
+                    原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+                    引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其
+                    在栈中的地址，取得地址后从堆中获得实体
+                    <img src="img/687474703a2f2f7777772e77337363686f6f6c2e636f6d2e636e2f692f63745f6a735f76616c75652e676966.gif">
+                </pre>
+                <h4>6.Javascript如何实现继承？</h4>
+                <pre>
+                      1、构造继承
+                      2、原型继承
+                      3、实例继承
+                      4、拷贝继承
+
+                      原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式。
+
+                       function Parent(){
+                              this.name = 'wang';
+                          }
+
+                          function Child(){
+                              this.age = 28;
+                          }
+                          Child.prototype = new Parent();//继承了Parent，通过原型
+
+                          var demo = new Child();
+                          alert(demo.age);
+                          alert(demo.name);//得到被继承的属性
+                        }
+                </pre>
+                <h4>7.JavaScript继承的几种实现方式？</h4>
+                <pre>
+                      http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html
+                      http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html
+                </pre>
+                <h4>8.javascript创建对象的几种方式？</h4>
+                <pre>
+                      javascript创建对象简单的说,无非就是使用内置对象或各种自定义对象，当然还可以用JSON；但写法有很多种，也能混合使用。
+
+
+                      1、对象字面量的方式   
+
+                          person={firstname:"Mark",lastname:"Yun",age:25,eyecolor:"black"};
+
+                      2、用function来模拟无参的构造函数
+
+                          function Person(){}
+                          var person=new Person();//定义一个function，如果使用new"实例化",该function可以看作是一个Class
+                          person.name="Mark";
+                          person.age="25";
+                          person.work=function(){
+                          alert(person.name+" hello...");
+                          }
+                          person.work();
+
+                      3、用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）
+
+                          function Pet(name,age,hobby){
+                             this.name=name;//this作用域：当前对象
+                             this.age=age;
+                             this.hobby=hobby;
+                             this.eat=function(){
+                                alert("我叫"+this.name+",我喜欢"+this.hobby+",是个程序员");
+                             }
+                          }
+                          var maidou =new Pet("麦兜",25,"coding");//实例化、创建对象
+                          maidou.eat();//调用eat方法
+
+
+                      4、用工厂方式来创建（内置对象）
+
+                           var wcDog =new Object();
+                           wcDog.name="旺财";
+                           wcDog.age=3;
+                           wcDog.work=function(){
+                             alert("我是"+wcDog.name+",汪汪汪......");
+                           }
+                           wcDog.work();
+
+
+                      5、用原型方式来创建
+
+                          function Dog(){
+
+                           }
+                           Dog.prototype.name="旺财";
+                           Dog.prototype.eat=function(){
+                           alert(this.name+"是个吃货");
+                           }
+                           var wangcai =new Dog();
+                           wangcai.eat();
+
+
+                      5、用混合方式来创建
+
+                          function Car(name,price){
+                            this.name=name;
+                            this.price=price; 
+                          }
+                           Car.prototype.sell=function(){
+                             alert("我是"+this.name+"，我现在卖"+this.price+"万元");
+                            }
+                          var camry =new Car("凯美瑞",27);
+                          camry.sell(); 
+                </pre>
+                <h4>9.Javascript作用链域?</h4>
+                <pre>
+                    全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节。
+                    当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找，
+                    直至全局函数，这种组织形式就是作用域链。
+                </pre>
+                <h4>10.谈谈This对象的理解</h4>
+                <pre>
+                   this总是指向函数的直接调用者（而非间接调用者）；
+                   如果有new关键字，this指向new出来的那个对象；
+                   在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；
+                </pre>
+                <h4>11.eval是做什么的？</h4>
+                <pre>
+                    它的功能是把对应的字符串解析成JS代码并运行；
+                    应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+                    由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
+                </pre>
+                <h4>12.什么是window对象? 什么是document对象? </h4>
+                <pre>
+                
+                </pre>
+                <h4>13.null，undefined 的区别？</h4>
+                <pre>
+                    null        表示一个对象被定义了，值为“空值”；
+                    undefined   表示不存在这个值。
+
+
+                    typeof undefined
+                        //"undefined"
+                        undefined :是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined； 
+                        例如变量被声明了，但没有赋值时，就等于undefined
+
+                    typeof null
+                        //"object"
+                        null : 是一个对象(空对象, 没有任何属性和方法)；
+                        例如作为函数的参数，表示该函数的参数不是对象；
+
+                    注意：
+                        在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined
+
+
+                    再来一个例子：
+
+                        null
+                        Q：有张三这个人么？
+                        A：有！
+                        Q：张三有房子么？
+                        A：没有！
+
+                        undefined
+                        Q：有张三这个人么？
+                        A：没有！
+                        http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
+                </pre>
+                <h4>14.写一个通用的事件侦听器函数。</h4>
+                <pre>
+                    // event(事件)工具集，来源：github.com/markyun
+                    markyun.Event = {
+                        // 页面加载完成后
+                        readyEvent : function(fn) {
+                            if (fn==null) {
+                                fn=document;
+                            }
+                            var oldonload = window.onload;
+                            if (typeof window.onload != 'function') {
+                                window.onload = fn;
+                            } else {
+                                window.onload = function() {
+                                    oldonload();
+                                    fn();
+                                };
+                            }
+                        },
+                        // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+                        // 参数： 操作的元素,事件名称 ,事件处理程序
+                        addEvent : function(element, type, handler) {
+                            if (element.addEventListener) {
+                                //事件类型、需要执行的函数、是否捕捉
+                                element.addEventListener(type, handler, false);
+                            } else if (element.attachEvent) {
+                                element.attachEvent('on' + type, function() {
+                                    handler.call(element);
+                                });
+                            } else {
+                                element['on' + type] = handler;
+                            }
+                        },
+                        // 移除事件
+                        removeEvent : function(element, type, handler) {
+                            if (element.removeEventListener) {
+                                element.removeEventListener(type, handler, false);
+                            } else if (element.datachEvent) {
+                                element.detachEvent('on' + type, handler);
+                            } else {
+                                element['on' + type] = null;
+                            }
+                        },
+                        // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+                        stopPropagation : function(ev) {
+                            if (ev.stopPropagation) {
+                                ev.stopPropagation();
+                            } else {
+                                ev.cancelBubble = true;
+                            }
+                        },
+                        // 取消事件的默认行为
+                        preventDefault : function(event) {
+                            if (event.preventDefault) {
+                                event.preventDefault();
+                            } else {
+                                event.returnValue = false;
+                            }
+                        },
+                        // 获取事件目标
+                        getTarget : function(event) {
+                            return event.target || event.srcElement;
+                        },
+                        // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+                        getEvent : function(e) {
+                            var ev = e || window.event;
+                            if (!ev) {
+                                var c = this.getEvent.caller;
+                                while (c) {
+                                    ev = c.arguments[0];
+                                    if (ev && Event == ev.constructor) {
+                                        break;
+                                    }
+                                    c = c.caller;
+                                }
+                            }
+                            return ev;
+                        }
+                    };
+                </pre>
+                <h4>15.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h4>
+                <pre>
+                     1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。
+                     2. 事件处理机制：IE是事件冒泡、Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件；
+                     3. ev.stopPropagation();（旧ie的方法 ev.cancelBubble = true;）
+                </pre>
+                <h4>15.什么是闭包（closure），为什么要用它？</h4>
+                <pre>
+                    闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。
+
+                    闭包的特性：
+
+                    1.函数内再嵌套函数
+                    2.内部函数可以引用外层的参数和变量
+                    3.参数和变量不会被垃圾回收机制回收
+
+                    //li节点的onclick事件都能正确的弹出当前被点击的li索引
+                     &lt;ul id="testUL">
+                        &lt;li> index = 0&lt;/li>
+                        &lt;li> index = 1&lt;/li>
+                        &lt;li> index = 2&lt;/li>
+                        &lt;li> index = 3&lt;/li>
+                    &lt;/ul>
+                    &lt;script type="text/javascript"&gt;
+                        var nodes = document.getElementsByTagName("li");
+                        for(i = 0;i&lt;nodes.length;i+= 1){
+                            nodes[i].onclick = function(){
+                                console.log(i+1);//不用闭包的话，值每次都是4
+                            }(i);
+                        }
+                    &lt;/script&gt;
+
+                    执行say667()后,say667()闭包内部变量会存在,而闭包内部函数的内部变量不会存在
+                    使得Javascript的垃圾回收机制GC不会收回say667()所占用的资源
+                    因为say667()的内部函数的执行需要依赖say667()中的变量
+                    这是对闭包作用的非常直白的描述
+
+                      function say667() {
+                        // Local variable that ends up within closure
+                        var num = 666;
+                        var sayAlert = function() {
+                            alert(num);
+                        }
+                        num++;
+                        return sayAlert;
+                    }
+
+                     var sayAlert = say667();
+                     sayAlert()//执行结果应该弹出的667
+                </pre>
+                <h4>16.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？</h4>
+                <pre>
+                    use strict是一种ECMAscript 5 添加的（严格）运行模式,这种模式使得 Javascript 在更严格的条件下运行,
+
+                    使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为。
+                    默认支持的糟糕特性都会被禁用，比如不能用with，也不能在意外的情况下给全局变量赋值;
+                    全局变量的显示声明,函数必须声明在顶层，不允许在非函数代码块内声明函数,arguments.callee也不允许使用；
+                    消除代码运行的一些不安全之处，保证代码运行的安全,限制函数中的arguments修改，严格模式下的eval函数的行为和非严格模式的也不相同;
+
+                    提高编译器效率，增加运行速度；
+                    为未来新版本的Javascript标准化做铺垫。
+                </pre>
+                <h4>17.如何判断一个对象是否属于某个类？</h4>
+                <pre>
+                   使用instanceof （待完善）
+                   if(a instanceof Person){
+                       alert('yes');
+                   }
+                </pre>
+                <h4>18.new操作符具体干了什么呢?</h4>
+                <pre>
+                   1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+                   2、属性和方法被加入到 this 引用的对象中。
+                   3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+
+              var obj  = {};
+              obj.__proto__ = Base.prototype;
+              Base.call(obj);
+                </pre>
+                <h4>19.用原生JavaScript的实现过什么功能吗？</h4>
+                <pre>
+                    http://zhoushuai.applinzi.com/
+                </pre>
+                <h4>20.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</h4>
+                <pre>
+                    hasOwnProperty
+
+                    javaScript中hasOwnProperty函数方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。
+                    使用方法：
+                    object.hasOwnProperty(proName)
+                    其中参数object是必选项。一个对象的实例。
+                    proName是必选项。一个属性名称的字符串值。
+
+                    如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty函数方法返回 true，反之则返回 false。
+                </pre>
+                <h4>21.JSON 的了解？</h4>
+                <pre>
+                    JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。
+                    它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小
+                    如：{"age":"12", "name":"back"}
+
+                    JSON字符串转换为JSON对象:
+                    var obj =eval('('+ str +')');
+                    var obj = str.parseJSON();
+                    var obj = JSON.parse(str);
+
+                    JSON对象转换为JSON字符串：
+                    var last=obj.toJSONString();
+                    var last=JSON.stringify(obj);
+                </pre>
+                <h4>22.js延迟加载的方式有哪些？</h4>
+                <pre>
+                    defer和async、动态创建DOM方式（用得最多）、按需异步载入js
+                </pre>
+                <h4>23.Ajax 是什么? 如何创建一个Ajax？</h4>
+                <pre>
+                    ajax的全称：Asynchronous Javascript And XML。
+                    异步传输+js+xml。
+                    所谓异步，在这里简单地解释就是：向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验。
+
+                    (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象
+                    (2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息
+                    (3)设置响应HTTP请求状态变化的函数
+                    (4)发送HTTP请求
+                    (5)获取异步调用返回的数据
+                    (6)使用JavaScript和DOM实现局部刷新
+                </pre>
+                <h4>24.同步和异步的区别?</h4>
+                <pre>
+                    同步的概念应该是来自于OS中关于同步的概念:不同进程为协同完成某项工作而在先后次序上调整(通过阻塞,唤醒等方式).同步强调的是顺序性.谁先谁后.异步则不存在这种顺序性.
+
+                    同步：浏览器访问服务器请求，用户看得到页面刷新，重新发请求,等请求完，页面刷新，新内容出现，用户看到新内容,进行下一步操作。
+
+                    异步：浏览器访问服务器请求，用户正常操作，浏览器后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容。
+                </pre>
+                <h4>25.如何解决跨域问题?</h4>
+                <pre>
+                    jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面
+                </pre>
+                <h4>26.模块化开发怎么做？</h4>
+                <pre>
+                    立即执行函数,不暴露私有成员
+
+                    var module1 = (function(){
+                    　　　　var _count = 0;
+                    　　　　var m1 = function(){
+                    　　　　　　//...
+                    　　　　};
+                    　　　　var m2 = function(){
+                    　　　　　　//...
+                    　　　　};
+                    　　　　return {
+                    　　　　　　m1 : m1,
+                    　　　　　　m2 : m2
+                    　　　　};
+                    　　})();
+                </pre>
+                <h4>27.AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？</h4>
+                <pre>
+                    AMD 规范在这里：https://github.com/amdjs/amdjs-api/wiki/AMD
+
+                  CMD 规范在这里：https://github.com/seajs/seajs/issues/242
+                  Asynchronous Module Definition，异步模块定义，所有的模块将被异步加载，模块加载不影响后面语句运行。所有依赖某些模块的语句均放置在回调函数中。
+
+                   区别：
+
+                      1. 对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.
+                      2. CMD 推崇依赖就近，AMD 推崇依赖前置。看代码：
+
+                  // CMD
+                  define(function(require, exports, module) {
+                      var a = require('./a')
+                      a.doSomething()
+                      // 此处略去 100 行
+                      var b = require('./b') // 依赖可以就近书写
+                      b.doSomething()
+                      // ...
+                  })
+
+                  // AMD 默认推荐
+                  define(['./a', './b'], function(a, b) { // 依赖必须一开始就写好
+                      a.doSomething()
+                      // 此处略去 100 行
+                      b.doSomething()
+                      // ...
+                  })
+                </pre>
+                <h4>28.requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）</h4>
+                <pre>
+                  
+                </pre>
+                <h4>29.谈一谈你对ECMAScript6的了解？</h4>
+                <pre>
+                  
+                </pre>
+                <h4>30.异步加载JS的方式有哪些？</h4>
+                <pre>
+                    (1) defer，只支持IE
+
+                    (2) async：
+
+                    (3) 创建script，插入到DOM中，加载完毕后callBack
+                </pre>
+                <h4>31.documen.write和 innerHTML的区别</h4>
+                <pre>
+                  document.write只能重绘整个页面
+
+                  innerHTML可以重绘页面的一部分
+                </pre>
+                <h4>32.DOM操作——怎样添加、移除、移动、复制、创建和查找节点?</h4>
+                <pre>
+                    （1）创建新节点
+                      createDocumentFragment()    //创建一个DOM片段
+                      createElement()   //创建一个具体的元素
+                      createTextNode()   //创建一个文本节点
+                    （2）添加、移除、替换、插入
+                      appendChild()
+                      removeChild()
+                      replaceChild()
+                      insertBefore() //在已有的子节点前插入一个新的子节点
+                    （3）查找
+                      getElementsByTagName()    //通过标签名称
+                      getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)
+                      getElementById()    //通过元素Id，唯一性
+                </pre>
+                <h4>33..call() 和 .apply() 的区别？</h4>
+                <pre>
+                  call 和 apply 都是为了改变某个函数运行时的 context 即上下文而存在的，换句话说，就是为了改变函数体内部 this 的指向。因为 JavaScript 的函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念。
+
+                  二者的作用完全一样，只是接受参数的方式不太一样。例如，有一个函数 func1 定义如下：
+                  var func1 = function(arg1, arg2) {};
+                  就可以通过 func1.call(this, arg1, arg2); 或者 func1.apply(this, [arg1, arg2]); 来调用。其中 this 是你想指定的上下文，他可以任何一个 JavaScript 对象(JavaScript 中一切皆对象)，call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。
+
+                  JavaScript 中，某个函数的参数数量是不固定的，因此要说适用条件的话，当你的参数是明确知道数量时，用 call，而不确定的时候，用 apply，然后把参数 push 进数组传递进去。当参数数量不确定时，函数内部也可以通过 arguments 这个数组来便利所有的参数。
+                </pre>
+                <h5>34.WEB应用从服务器主动推送Data到客户端有那些方式</h5>
+                <pre>
+                    html5提供的Websocket
+                    不可见的iframe
+                    WebSocket通过Flash
+                    XHR长时间连接
+                    XHR Multipart Streaming
+                    &lt;script&gt;标签的长时间连接(可跨域)
+                </pre>
+                <h4>35.你有用过哪些前端性能优化的方法？</h4>
+                <pre>
+                    （1） 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。
+
+                    （2） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数
+
+                    （3） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。
+
+                    （4） 当需要设置的样式很多时设置className而不是直接操作style。
+
+                    （5） 少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。
+
+                    （6） 避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。
+
+                    （7） 图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳。
+
+                    （8） 避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢。
+                    对普通的网站有一个统一的思路，就是尽量向前端优化、减少数据库操作、减少磁盘IO。向前端优化指的是，在不影响功能和体验的情况下，能在浏览器执行的不要在服务端执行，能在缓存服务器上直接返回的不要到应用服务器，程序能直接取得的结果不要到外部取得，本机内能取得的数据不要到远程取，内存能取到的不要到磁盘取，缓存中有的不要去数据库查询。减少数据库操作指减少更新次数、缓存结果减少查询次数、将数据库执行的操作尽可能的让你的程序完成（例如join查询），减少磁盘IO指尽量不使用文件系统作为缓存、减少读写文件次数等。程序优化永远要优化慢的部分，换语言是无法“优化”的。
+                </pre>
+                
+            </div>
+        </article>
+        <footer>
+            &copy;Jhou Shuai ----高级前端工程师面试题
+        </footer>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

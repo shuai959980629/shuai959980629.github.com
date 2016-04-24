@@ -1,0 +1,14 @@
+article .bs-callout-info  h4,article .bs-callout-info h4 a{
+    line-height: 30px;
+    color: #ffffff;
+    padding-left:10px;
+    background-color: #03A9F4;
+    border-radius: 4px;
+}
+article div p{
+    text-indent:2em;
+    line-height:25px;
+}
+pre{
+	font-size: 14px;
+}

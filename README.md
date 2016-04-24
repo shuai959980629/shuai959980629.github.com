@@ -20,6 +20,7 @@
     <li><a target="_blank" href="news01/home/index.html">php版的百度新闻</a></li>
     <li><a target="_blank" href="news02">NodeJs1.0版的百度新闻</a></li>
     <li><a target="_blank" href="news03">NodeJs1.1版的百度新闻</a></li>
+    <li><a target="_blank" href="interview/index.html">目前本人开发知识体系图</a></li>
 </ul>
 
 

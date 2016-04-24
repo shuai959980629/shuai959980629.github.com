@@ -275,6 +275,11 @@ body,div,ul,li,a{
     z-index: 999;
 }
 /*列表*/
+.list-program-wrapper{
+    height: 570px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .product li{
     display: block;
     width:180px;
