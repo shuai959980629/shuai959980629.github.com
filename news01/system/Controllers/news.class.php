@@ -46,16 +46,15 @@ class news extends Controller{
         $title  = addslashes($_POST['title']);
         $introduction  = addslashes($_POST['introduction']);
         $id = intval($_POST['id']);
-        $result1 = true;
-        $result2 = true;
+        $result = true;
         if(!empty($id)){
-            $sql  = "UPDATE `newslist` SET `cat_id` = {$cat_id}, `title` = '{$title}',`introduction`='{$introduction}' WHERE `id` = {$id}";
-            $result1 = $this->db->update($sql);
+            $sql   = "UPDATE `newslist` SET `cat_id` = {$cat_id}, `title` = '{$title}',`introduction`='{$introduction}' WHERE `id` = {$id}";
+            $result = $this->db->update($sql);
         }else{
-            $mysql = "INSERT INTO `newslist`(cat_id,title,introduction,created) VALUES ({$cat_id},'{$title}','{$introduction}',{$created})";
-            $result2 = $this->db->insert($mysql);
+            $mysql  = "INSERT INTO `newslist`(cat_id,title,introduction,created) VALUES ({$cat_id},'{$title}','{$introduction}',{$created})";
+            $result = $this->db->insert($mysql);
         }
-        if($result1 && $result2){
+        if($result){
             $this->return_client(1);
         }else{
             $this->return_client(0,null,'保存失败！');
@@ -102,17 +101,13 @@ class news extends Controller{
         }
         $table = trim($_POST['type']);
         $id    = intval($_POST['id']);
-        $result1 = true;
         if($table=='category'){
             $sql = "DELETE FROM `newslist` WHERE `cat_id` = {$id}";
-            $result1 = $this->db->delete($sql);
+            $this->db->delete($sql);
         }
         $mysql  = "DELETE FROM `{$table}` WHERE `id` = {$id}";
-        $result2 =  $this->db->delete($mysql);
-        if($result1 && $result2){
-            $this->return_client(1);
-        }
-        $this->return_client(0,null,'删除失败！');
+        $this->db->delete($mysql);
+        $this->return_client(1);
     }
 
     public function getNewsItem(){
