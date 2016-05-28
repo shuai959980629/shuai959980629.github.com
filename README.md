@@ -23,6 +23,7 @@
     <li><a target="_blank" href="interview/index.html">目前本人开发知识体系图</a></li>
     <li><a target="_blank" href="graduation.html">毕业设计</a></li>
     <li><a target="_blank" href="idea.html"> I need a good idea, please!</a></li>
+    <li><a target="_blank" href="resume.md">个人简历</a></li>
 </ul>
 
 
