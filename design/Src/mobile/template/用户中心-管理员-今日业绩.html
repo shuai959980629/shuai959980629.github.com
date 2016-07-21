@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>用户中心-管理员-今日业绩</title>
+		<link rel="stylesheet" href="../assets/css/frozen.css" />
+	</head>
+
+	<body ontouchstart="" class="detail">
+		<ul class="ui-list ui-list-text ui-list-link ui-border-tb" style="height: auto; margin-top: -1px;">
+			<li class="ui-border-t">
+				<h4 class="ui-nowrap"><b>今日全国总业绩</b></h4><span><b>435万</b></span>
+			</li>
+		</ul>
+		<div class="ui-form ui-border-t">
+			<form action="#">
+				<div class="ui-form-item ui-border-b">
+					<label>分公司</label>
+					<div class="ui-select">
+						<select>
+							<option>重庆（120万）</option>
+							<option selected>成都（120万）</option>
+							<option>遂宁（120万）</option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+		<h2>2015-12-02成都业绩</h2>
+		<div class="ui-tab">
+			<ul class="ui-tab-nav ui-border-b">
+				<li class="current">待处理业务</li>
+				<li>已完成业务</li>
+			</ul>
+			<ul class="ui-tab-content" style="width:300%; padding: 0;">
+				<li class="current">
+					<div class="list">
+						<ul class="ui-list ui-list-link ui-list-active">
+							<li class="ui-border-t">
+								<div class="ui-list-img car-logo">
+									<img src="../assets/images/b1.jpg">
+								</div>
+								<div class="ui-list-info">
+									<h4>【成都-XXX】傲虎2.5LI 雅尚运动版 300I 领先20136技术性</h4>
+									<h5><b class="fcolor_red">风控价：¥23.5~¥25万元（待签合同）</b></h5>
+								</div>
+							</li>
+							<li class="ui-border-t">
+								<div class="ui-list-img car-logo">
+									<img src="../assets/images/b1.jpg">
+								</div>
+								<div class="ui-list-info">
+									<h4>【成都-XXX】傲虎2.5LI 雅尚运动版 300I Speakback技术性</h4>
+									<h5 class="ui-nowrap"><b class="fcolor_green">评估价：¥23.5万元（待审核）</b></h5>
+								</div>
+							</li>
+							<li class="ui-border-t">
+								<div class="ui-list-img car-logo">
+									<img src="../assets/images/b1.jpg">
+								</div>
+								<div class="ui-list-info">
+									<h4>【成都-XXX】傲虎2.5LI 雅尚运动版 300I 领先20136技术性</h4>
+									<h5 class="ui-nowrap"><b>估值价：¥23.5万元（待评估）</b></h5>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<ul class="ui-list ui-list-link ui-list-active">
+						<li class="ui-border-t">
+							<div class="ui-list-img car-logo">
+								<img src="../assets/images/b1.jpg">
+							</div>
+							<div class="ui-list-info">
+								<h4>【成都-XXX】傲虎2.5LI 雅尚运动版 300I领先技术</h4>
+								<h5><b class="fcolor_blue">成交价：¥23.5万（已完成）</b></h5>
+							</div>
+						</li>
+						<li class="ui-border-t">
+							<div class="ui-list-img car-logo">
+								<img src="../assets/images/b1.jpg">
+							</div>
+							<div class="ui-list-info">
+								<h4>【成都-XXX】傲虎2.5LI 雅尚运动版 300I领先技术</h4>
+								<h5><b class="fcolor_blue">成交价：¥23.5万（已完成）</b></h5>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../assets/js/libs/zepto.min.js"></script>
+	<script src="../assets/js/libs/frozen.js"></script>
+	<script>
+		(function() {
+			var tab = new fz.Scroll('.ui-tab', {
+				role: 'tab',
+				autoplay: true,
+				interval: 70000
+			});
+			tab.on('beforeScrollStart', function(from, to) {
+				console.log(from, to);
+			});
+			tab.on('scrollEnd', function(curPage) {
+				console.log(curPage);
+			});
+		})();
+	</script>
+
+</html>

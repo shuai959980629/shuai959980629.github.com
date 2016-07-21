@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>第二步：评估组长分配订单</title>
+		<link rel="stylesheet" href="../assets/css/frozen.css" />
+	</head>
+
+	<body ontouchstart="" class="detail">
+		<div class="ui-tooltips ui-tooltips-warn">
+			<div class="ui-tooltips-cnt ui-border-b relative">
+				<b>车辆估值价格：¥12.45万</b>
+				<button class="ui-btn ui-btn-primary">修改 </button>
+			</div>
+		</div>
+		<ul class="ui-list ui-list-link ui-border-tb" style="margin-top: -1px;">
+			<li class="ui-border-t">
+				<div class="ui-list-img car-logo">
+					<img src="../assets/images/b1.jpg">
+				</div>
+				<div class="ui-list-info">
+					<h4>2014款 傲虎2.5LI 雅尚运动版 300I Speakback技术性</h4>
+				</div>
+			</li>
+			<dl>
+				<dt>
+					<p>所在城市</p>
+					<h4>四川成都</h4>
+				</dt>
+				<dt class="linelr">
+					<p>上牌日期</p>
+					<h4>2014年3月</h4>
+				</dt>
+				<dt>
+					<p>行驶里程</p>
+					<h4>3.5万公里</h4>
+				</dt>
+			</dl>
+		</ul>
+		<ul class="ui-list ui-list-text ui-list-link ui-border-tb" style="height: auto; margin-top: -1px;">
+			<li class="ui-border-t">
+				<h4 class="ui-nowrap">2015-10-23 12:20</h4>
+				<span class="ui-panel-subtitle">查询日期</span>
+			</li>
+			<li class="ui-border-t">
+				<h4>客户车子停在时代一号附二楼A45车位，客户需要15万</h4>
+				<span class="ui-panel-subtitle">业务说明</span>
+			</li>
+		</ul>
+
+		<h2>车况详情</h2>
+		<div class="ui-form ui-border-t">
+			<form action="#">
+				<div class="ui-form-item ui-border-b">
+					<label>车身颜色</label>
+					<div class="ui-select">
+						<select>
+							<option>请选择</option>
+							<option selected="selected">白色</option>
+							<option>黑色</option>
+							<option>红色</option>
+						</select>
+					</div>
+				</div>
+				<div class="ui-form-item ui-border-b">
+					<label>内饰状况</label>
+					<div class="ui-select">
+						<select>
+							<option>请选择</option>
+							<option selected="selected">优</option>
+							<option>良</option>
+							<option>中</option>
+							<option>差</option>
+						</select>
+					</div>
+				</div>
+				<div class="ui-form-item ui-border-b">
+					<label>漆面状况</label>
+					<div class="ui-select">
+						<select>
+							<option>请选择</option>
+							<option selected="selected">优</option>
+							<option>良</option>
+							<option>中</option>
+							<option>差</option>
+						</select>
+					</div>
+				</div>
+				<div class="ui-form-item ui-border-b">
+					<label>工况状况</label>
+					<div class="ui-select">
+						<select>
+							<option>请选择</option>
+							<option selected="selected">优</option>
+							<option>良</option>
+							<option>中</option>
+							<option>差</option>
+						</select>
+					</div>
+				</div>
+				</from>
+		</div>
+
+		</div>
+		<div class="ui-btn-wrap">
+			<div class="ui-progress mb15">
+				<span class="on">1.估值查询</span>
+				<span class="on">2.评估定价</span>
+				<span>3.风控审核</span>
+				<span>4.签订合同</span>
+				<span>5.完成</span>
+			</div>
+			<button class="ui-btn-lg ui-btn-danger">
+				评估车辆
+			</button>
+			<button class="ui-btn-lg ui-btn-primary mt15">
+				分配给其他评估师
+			</button>
+		</div>
+
+		<div class="ui-actionsheet">
+			<ul class="ui-list ui-list-active ui-list-text ui-list-radio ui-border-tb" style="height: auto;">
+				<li class="ui-border-t">
+					<label class="ui-radio" for="radio">
+						<input type="radio" name="radio">
+					</label>
+					<p><b>小阿虎</b>(评估师-15608073100)</p>
+				</li>
+				<li class="ui-border-t">
+					<label class="ui-radio" for="radio">
+						<input type="radio" checked name="radio">
+					</label>
+					<p><b>李云龙</b>(评估师-15608073100)</p>
+				</li>
+				<button class="ui-btn-lg ui-btn-primary">确认分配</button>
+			</ul>
+		</div>
+		<script src="../assets/js/libs/zepto.min.js"></script>
+		<script src="../assets/js/libs/frozen.js"></script>
+		<script type="text/javascript">
+			$('.ui-actionsheet').addClass('show');
+			$('.ui-searchbar').tap(function() {
+				$('.ui-searchbar-wrap').addClass('focus');
+				$('.ui-searchbar-input input').focus();
+			});
+			$('.ui-searchbar-cancel').tap(function() {
+				$('.ui-searchbar-wrap').removeClass('focus');
+			});
+		</script>
+	</body>
+</html>
